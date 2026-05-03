@@ -129,13 +129,27 @@ Use anchored connectors where possible:
 - Use a group-level edge when it removes duplicate parallel connections without changing meaning.
 - Split the diagram when crossings become the dominant visual feature.
 
+## Label Clearance Before Routing
+
+Before finalizing routes, check whether each edge label has a clear empty area around it.
+When a useful label competes with block compactness, move the blocks or add a gutter first; shorten the label only when the meaning still survives.
+
+- Give long action labels their own straight segment whenever possible.
+- Put labels in the open space between source and target blocks, not half-over a block edge.
+- Increase distance between adjacent blocks when the label would otherwise touch arrowheads, borders, or nearby text.
+- Stagger parallel edge labels so they do not form one unreadable cluster.
+- Route secondary feedback, retry, callback, and compensation labels through a separate lane when they would crowd the primary flow.
+- If a renderer places labels automatically and the result is cramped, adjust the diagram geometry and re-check the rendered or parsed artifact.
+
 ## Format-Specific Routing
 
 - Mermaid: manual routing, curves, and explicit anchor ports are limited; connect node IDs directly and reduce crossings through grouping, layout direction, shallow subgraphs, and diagram splitting.
 - Mermaid: when a group frame cannot be the true endpoint, add a small boundary anchor node inside the subgraph and connect to that anchor node.
-- DrawIO: use anchored connectors with source and target cells, then add waypoints and curved or orthogonal routing so lines flow around blocks and group frames.
+- DrawIO: use anchored connectors with source and target cells, then add waypoints and curved or orthogonal routing so lines flow around blocks, labels, and group frames.
+- DrawIO: leave enough coordinate distance between connected blocks for the edge label; if the label is longer than the visual gap, widen the gap or move the label onto a longer segment.
 - DrawIO: attach group-level edges to the group container when possible; otherwise use a named boundary anchor cell inside the group.
 - Excalidraw: bind arrow endpoints to the source and target shapes when supported, then use curved arrows and generous spacing for cross-lane relationships.
+- Excalidraw: give text labels their own visible whitespace; bound arrows should not make the label collide with the connected shapes.
 - Excalidraw: avoid coordinate-only arrows that merely touch or hover near a block when a bound arrow can be used.
 
 ## Text And Label Spacing

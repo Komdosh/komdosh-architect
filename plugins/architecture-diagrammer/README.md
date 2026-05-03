@@ -44,6 +44,7 @@ If a subskill is invoked directly without source text or a source-backed invento
 
 A good result is source-backed, compact, renderable, and standalone.
 It should make the architecture easier to review without replacing the source document.
+Compact does not mean squeezed: connector labels need deliberate whitespace between blocks when those labels carry architecture meaning.
 
 Reject or revise a diagram when it:
 
@@ -72,4 +73,4 @@ Source-backed examples live under [examples/](examples/):
 - `H` Hierarchy: clear ownership, context, trust, and abstraction boundaries.
 - `E` Edges: directional flows with useful labels and no duplicate or decorative connections.
 - `M` Medium: Mermaid for simple text-native diagrams, DrawIO for standard polished diagrams, Excalidraw when explicitly requested.
-- `A` Alignment: top-bottom and left-right reading order with compact lanes and minimal crossing.
+- `A` Alignment: top-bottom and left-right reading order with enough spacing for labels and minimal crossing.

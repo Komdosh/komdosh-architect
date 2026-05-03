@@ -18,7 +18,7 @@ Think only about the diagram view:
 
 - include only architecture facts present in the source text or explicitly marked assumptions
 - make the diagram understandable without reading surrounding prose
-- keep the visual result compact enough for a developer to understand the solution quickly
+- keep the visual result compact enough for a developer to understand the solution quickly, but never so compact that connector labels become cramped
 - do not rewrite the architecture document unless the user separately asks for document editing
 
 ## Software Architecture Scope Fit
@@ -73,7 +73,7 @@ Apply `SCHEMA` before exporting:
 - `H` Hierarchy: ownership, trust, runtime, and abstraction boundaries are visible.
 - `E` Edges: connections are directional, labeled, necessary, and not tangled.
 - `M` Medium: Mermaid, DrawIO, or Excalidraw fits the requested use case.
-- `A` Alignment: the flow reads top-bottom and left-right with consistent spacing.
+- `A` Alignment: the flow reads top-bottom and left-right with spacing that leaves labels readable.
 
 ## Output Contract
 

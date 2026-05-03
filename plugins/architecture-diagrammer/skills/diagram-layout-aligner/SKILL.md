@@ -53,8 +53,22 @@ For service or system views, prefer this reading order unless the source text ne
 - Use consistent block sizes for comparable components.
 - Keep lane titles short and stable.
 - Avoid nested groups unless the hierarchy is necessary to understand ownership.
-- Keep whitespace intentional: enough room for labels, not enough to scatter the diagram.
+- Keep whitespace intentional: enough room for labels and connector paths, not enough to scatter the diagram.
+- Treat connector labels as layout objects, not decoration that can be squeezed in later.
 - Do not create decorative frames or empty groups.
+
+## Label Clearance Spacing
+
+Leave deliberate gaps between blocks when a labeled connector needs room to be readable.
+Compactness means fast comprehension, not minimum distance between boxes.
+
+- Reserve a clear label corridor between neighboring blocks before exporting.
+- Prefer widening a lane, row, or group gutter when the label is source-backed and useful.
+- Use tighter spacing only for unlabeled, very short, or obviously adjacent relationships.
+- Keep more room around cross-boundary, async, callback, retry, and compensation labels because those labels usually carry architecture meaning.
+- For DrawIO and Excalidraw, use explicit coordinates with enough horizontal or vertical distance for the full edge label; do not rely on auto-routing to find space after export.
+- For Mermaid, spacing control is limited; reduce label density, group relationships, split the view, or choose DrawIO/Excalidraw when edge-label readability matters more than text-native compactness.
+- Do not add fake architecture components just to force spacing. If a renderer requires layout help, use a non-semantic format feature or choose a better medium.
 
 ## Mermaid Guidance
 

@@ -63,6 +63,7 @@ Then run human-presentation checks:
 | Group edges | Do group-level connections point to the group boundary or a named group anchor, not to the first child? |
 | Endpoint correctness | Does each connector point to the intended item with the arrowhead and attachment side matching the flow? |
 | Connector anchoring | Are connectors anchored to blocks, group frames, or named anchors when the format supports it? |
+| Label clearance | Do labeled connectors have enough empty space, or should blocks be moved apart before delivery? |
 | Visual balance | Does the diagram avoid cramped regions, awkward empty areas, and distracting edge tangles? |
 
 ## Findings
@@ -91,6 +92,7 @@ Treat these as blockers:
 - connector attached to the wrong item, wrong group member, wrong boundary, or wrong side of the target
 - connector drawn as a loose line near a block when the format supports anchoring it to that block
 - group border cutting through grouped items, labels, or connectors
+- connection labels overlapping or touching blocks, group borders, arrowheads, or other labels
 - diagram too cramped, overlapped, or visually unpolished to show to a human reviewer
 
 ## Output

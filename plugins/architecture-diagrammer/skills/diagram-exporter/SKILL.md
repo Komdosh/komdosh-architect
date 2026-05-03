@@ -64,6 +64,7 @@ If a diagram may not render, simplify it before returning it.
 
 - Prefer explicit fill, stroke, font color, and rounded rectangle settings.
 - Keep blocks aligned to a clear grid.
+- Space connected blocks far enough apart that edge labels fit between them without touching block borders.
 - Use theme-safe colors that work on light and dark backgrounds.
 - Group by ownership and boundary, not by decorative sections.
 - If asked for a file, produce valid `.drawio` XML.
@@ -75,6 +76,7 @@ If a diagram may not render, simplify it before returning it.
 - Use restrained strokes and simple backgrounds.
 - Use hatching or roughness only to separate groups or assumptions.
 - Keep text readable and avoid hand-written density.
+- Leave visible whitespace around arrow labels; increase block spacing before accepting label overlap.
 - If asked for a file, produce valid `.excalidraw` JSON.
 - For file output, the JSON must parse and include an `elements` array.
 - Bind arrows to source and target elements when supported by the format.
