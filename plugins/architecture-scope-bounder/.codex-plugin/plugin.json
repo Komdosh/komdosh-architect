@@ -1,0 +1,37 @@
+{
+  "name": "architecture-scope-bounder",
+  "version": "0.1.0",
+  "description": "Boundary-first architecture assistant for defining a focused system scope, actors, external systems, high-level use cases, exception paths, and context views.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "scope",
+    "system-boundaries",
+    "external-systems",
+    "actors",
+    "context-diagram",
+    "system-landscape",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Scope Bounder",
+    "shortDescription": "Defines focused system boundaries and context views.",
+    "longDescription": "Architecture Scope Bounder is an early architecture workflow plugin for focusing on one system part, clarifying the system of interest, identifying user roles and actors, mapping external systems and integration surfaces, describing high-level use cases and exception paths, and producing context or system-landscape diagrams. It prepares top-level design context for later architecture plugins without prematurely selecting detailed implementation.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-scope-bounder:architecture-scope-bounder to define the system boundary and top-level context for this product area.",
+      "Use $architecture-scope-bounder:external-system-landscape to identify external systems and integration expectations.",
+      "Use $architecture-scope-bounder:context-landscape-diagrammer to create a context diagram and system landscape view."
+    ],
+    "brandColor": "#6366F1"
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Actor Role Mapper"
+  short_description: "Map roles, actors, and trust positions."
+  brand_color: "#6366F1"
+  default_prompt: "Use $architecture-scope-bounder:actor-role-mapper to identify actors, roles, and trust boundaries."

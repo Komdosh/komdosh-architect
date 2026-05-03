@@ -1,0 +1,5 @@
+interface:
+  display_name: "Context Landscape Diagrammer"
+  short_description: "Create context and landscape diagrams."
+  brand_color: "#6366F1"
+  default_prompt: "Use $architecture-scope-bounder:context-landscape-diagrammer to create context and system landscape diagrams."

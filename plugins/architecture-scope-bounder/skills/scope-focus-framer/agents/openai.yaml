@@ -1,0 +1,5 @@
+interface:
+  display_name: "Scope Focus Framer"
+  short_description: "Frame one system of interest."
+  brand_color: "#6366F1"
+  default_prompt: "Use $architecture-scope-bounder:scope-focus-framer to define the system of interest and scope boundary."

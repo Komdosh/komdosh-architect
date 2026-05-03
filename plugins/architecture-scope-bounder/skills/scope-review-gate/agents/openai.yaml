@@ -1,0 +1,5 @@
+interface:
+  display_name: "Scope Review Gate"
+  short_description: "Review scope boundary readiness."
+  brand_color: "#6366F1"
+  default_prompt: "Use $architecture-scope-bounder:scope-review-gate to review this scope-boundary brief."

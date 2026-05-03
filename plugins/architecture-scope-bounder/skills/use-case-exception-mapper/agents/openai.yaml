@@ -1,0 +1,5 @@
+interface:
+  display_name: "Use Case Exception Mapper"
+  short_description: "Map top-level use cases and exceptions."
+  brand_color: "#6366F1"
+  default_prompt: "Use $architecture-scope-bounder:use-case-exception-mapper to capture high-level use cases and exception paths."

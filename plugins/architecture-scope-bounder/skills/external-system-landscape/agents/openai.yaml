@@ -1,0 +1,5 @@
+interface:
+  display_name: "External System Landscape"
+  short_description: "Map external systems and integration surfaces."
+  brand_color: "#6366F1"
+  default_prompt: "Use $architecture-scope-bounder:external-system-landscape to identify external systems and integration expectations."

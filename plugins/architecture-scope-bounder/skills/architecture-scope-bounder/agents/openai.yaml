@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Scope Bounder"
+  short_description: "Define focused system boundaries and context."
+  brand_color: "#6366F1"
+  default_prompt: "Use $architecture-scope-bounder:architecture-scope-bounder to define the system boundary and top-level context."
