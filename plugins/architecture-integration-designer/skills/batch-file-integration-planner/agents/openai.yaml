@@ -1,0 +1,5 @@
+interface:
+  display_name: "Batch File Integration Planner"
+  short_description: "Plan batch and file integrations."
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $architecture-integration-designer:batch-file-integration-planner to frame batch, file, import, export, and reconciliation integrations."

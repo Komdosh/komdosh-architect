@@ -1,0 +1,5 @@
+interface:
+  display_name: "Interaction Style Decider"
+  short_description: "Choose integration interaction style."
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $architecture-integration-designer:interaction-style-decider to choose sync, async, event, webhook, batch, or file integration styles."

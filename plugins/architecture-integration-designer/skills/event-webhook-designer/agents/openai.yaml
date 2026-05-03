@@ -1,0 +1,5 @@
+interface:
+  display_name: "Event Webhook Designer"
+  short_description: "Frame events, webhooks, and callbacks."
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $architecture-integration-designer:event-webhook-designer to frame event, webhook, and callback semantics."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Integration Diagrammer"
+  short_description: "Create integration diagrams."
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $architecture-integration-designer:integration-diagrammer to create integration context or flow diagrams."

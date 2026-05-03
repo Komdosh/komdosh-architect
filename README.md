@@ -1,7 +1,7 @@
 # Komdosh Architect Marketplace
 
 Codex marketplace repository for Komdosh architecture tools.
-It currently exposes the `architecture-diagrammer`, `architecture-requirementer`, `architecture-scope-bounder`, `architecture-domain-modeler`, `architecture-service-designer`, `architecture-data-designer`, and `architecture-load-estimator` plugins.
+It currently exposes the `architecture-diagrammer`, `architecture-requirementer`, `architecture-scope-bounder`, `architecture-domain-modeler`, `architecture-service-designer`, `architecture-data-designer`, `architecture-load-estimator`, and `architecture-integration-designer` plugins.
 
 ## Install
 
@@ -19,6 +19,7 @@ Plugin names remain stable:
 - `architecture-service-designer`
 - `architecture-data-designer`
 - `architecture-load-estimator`
+- `architecture-integration-designer`
 
 To enable plugins explicitly in `~/.codex/config.toml`:
 
@@ -43,6 +44,9 @@ enabled = true
 
 [plugins."architecture-load-estimator@komdosh-architect"]
 enabled = true
+
+[plugins."architecture-integration-designer@komdosh-architect"]
+enabled = true
 ```
 
 Restart Codex after adding or updating the marketplace so the plugin skills are loaded into the session context.
@@ -56,3 +60,4 @@ Restart Codex after adding or updating the marketplace so the plugin skills are 
 - [plugins/architecture-service-designer](plugins/architecture-service-designer)
 - [plugins/architecture-data-designer](plugins/architecture-data-designer)
 - [plugins/architecture-load-estimator](plugins/architecture-load-estimator)
+- [plugins/architecture-integration-designer](plugins/architecture-integration-designer)

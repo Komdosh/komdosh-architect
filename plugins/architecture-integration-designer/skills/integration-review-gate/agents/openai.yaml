@@ -1,0 +1,5 @@
+interface:
+  display_name: "Integration Review Gate"
+  short_description: "Review API and integration readiness."
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $architecture-integration-designer:integration-review-gate to review this integration design for API lifecycle readiness."

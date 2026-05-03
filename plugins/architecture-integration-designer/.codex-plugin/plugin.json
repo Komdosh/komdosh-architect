@@ -1,0 +1,39 @@
+{
+  "name": "architecture-integration-designer",
+  "version": "0.1.0",
+  "description": "Integration architecture assistant for designing API-first, event, webhook, batch, and external-system interfaces with extensibility, versioning, resilience, security, and support in mind.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "integration-design",
+    "api-design",
+    "contracts",
+    "versioning",
+    "events",
+    "webhooks",
+    "resilience",
+    "external-systems",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Integration Designer",
+    "shortDescription": "Designs API-first and integration contracts wisely.",
+    "longDescription": "Architecture Integration Designer turns service, data, load, and external-system context into integration architecture. It treats APIs as first-class design artifacts that must be easy to extend and hard to change or remove. It defines integration surfaces, contract ownership, API and event strategy, sync versus async decisions, webhook and batch flows, idempotency, retries, timeouts, ordering, versioning, compatibility, deprecation, security, observability, support, and integration diagrams without prematurely writing final schemas or implementation code.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-integration-designer:architecture-integration-designer to design API and integration contracts for this architecture.",
+      "Use $architecture-integration-designer:api-contract-strategist to define extensible API contract strategy and lifecycle.",
+      "Use $architecture-integration-designer:versioning-evolution-planner to plan compatibility, versioning, and deprecation."
+    ],
+    "brandColor": "#8B5CF6"
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Resilience Idempotency Planner"
+  short_description: "Define failure and retry semantics."
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $architecture-integration-designer:resilience-idempotency-planner to define idempotency, retries, timeouts, and compensation."

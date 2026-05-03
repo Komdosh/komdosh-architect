@@ -1,0 +1,5 @@
+interface:
+  display_name: "API Contract Strategist"
+  short_description: "Design API strategy and lifecycle."
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $architecture-integration-designer:api-contract-strategist to define extensible API contract strategy and lifecycle."

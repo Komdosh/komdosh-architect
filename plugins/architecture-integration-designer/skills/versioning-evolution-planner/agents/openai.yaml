@@ -1,0 +1,5 @@
+interface:
+  display_name: "Versioning Evolution Planner"
+  short_description: "Plan API evolution and compatibility."
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $architecture-integration-designer:versioning-evolution-planner to define compatibility, versioning, deprecation, and migration policy."

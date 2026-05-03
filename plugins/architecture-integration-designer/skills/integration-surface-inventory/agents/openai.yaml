@@ -1,0 +1,5 @@
+interface:
+  display_name: "Integration Surface Inventory"
+  short_description: "Inventory consumers and integration surfaces."
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $architecture-integration-designer:integration-surface-inventory to identify integration surfaces, consumers, and owners."
