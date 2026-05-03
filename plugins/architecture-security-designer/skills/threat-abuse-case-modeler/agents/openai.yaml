@@ -1,0 +1,5 @@
+interface:
+  display_name: "Threat Abuse Case Modeler"
+  short_description: "Model abuse cases."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:threat-abuse-case-modeler to identify architecture-level abuse cases, misuse paths, and mitigations."

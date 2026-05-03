@@ -1,0 +1,5 @@
+interface:
+  display_name: "Security Diagrammer"
+  short_description: "Create security diagrams."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:security-diagrammer to create security context, trust-boundary, access, data-exposure, abuse-flow, or audit diagrams."

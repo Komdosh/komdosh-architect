@@ -1,0 +1,5 @@
+interface:
+  display_name: "Trust Boundary Mapper"
+  short_description: "Map trust boundaries."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:trust-boundary-mapper to map trust boundaries, threat surfaces, and control points."

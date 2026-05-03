@@ -1,0 +1,5 @@
+interface:
+  display_name: "Security Context Inventory"
+  short_description: "Inventory security context."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:security-context-inventory to identify assets, actors, trust assumptions, data sensitivity, and security constraints."

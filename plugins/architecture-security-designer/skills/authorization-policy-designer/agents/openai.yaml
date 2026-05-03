@@ -1,0 +1,5 @@
+interface:
+  display_name: "Authorization Policy Designer"
+  short_description: "Design permissions and policy."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:authorization-policy-designer to define permission model, tenant isolation, policy ownership, and privileged access."

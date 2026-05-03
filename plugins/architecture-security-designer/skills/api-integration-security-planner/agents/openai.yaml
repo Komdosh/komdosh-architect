@@ -1,0 +1,5 @@
+interface:
+  display_name: "API Integration Security Planner"
+  short_description: "Secure APIs and integrations."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:api-integration-security-planner to define security controls for APIs, events, webhooks, batch, files, and external systems."

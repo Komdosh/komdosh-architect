@@ -1,0 +1,5 @@
+interface:
+  display_name: "Data Protection Privacy Planner"
+  short_description: "Plan data protection."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:data-protection-privacy-planner to define sensitive data protection, privacy, retention, deletion, and exposure rules."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Identity Access Modeler"
+  short_description: "Design identity access."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:identity-access-modeler to define identity types, authentication, sessions, tokens, and access entry points."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Secrets Keys Lifecycle Planner"
+  short_description: "Plan secrets and keys."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:secrets-keys-lifecycle-planner to define secrets, keys, certificates, credentials, rotation, revocation, and break-glass rules."

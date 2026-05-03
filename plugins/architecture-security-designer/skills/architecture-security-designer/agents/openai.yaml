@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Security Designer"
+  short_description: "Design security architecture."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:architecture-security-designer to design security architecture for this system."

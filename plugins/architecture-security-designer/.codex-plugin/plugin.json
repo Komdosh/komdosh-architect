@@ -1,0 +1,40 @@
+{
+  "name": "architecture-security-designer",
+  "version": "0.1.0",
+  "description": "Security architecture assistant for designing trust boundaries, identity, authorization, data protection, abuse cases, API and integration controls, secrets, audit, compliance, observability, and security diagrams.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "security-design",
+    "trust-boundaries",
+    "identity",
+    "authorization",
+    "data-protection",
+    "privacy",
+    "abuse-cases",
+    "audit",
+    "compliance",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Security Designer",
+    "shortDescription": "Designs security architecture and trust controls.",
+    "longDescription": "Architecture Security Designer turns requirements, scope, domain, service, data, load, integration, and deployment context into security architecture. It defines trust boundaries, threat surfaces, identity and access model, authorization policy, tenant isolation, data protection, privacy, abuse cases, API and integration controls, secrets and key lifecycle, audit, compliance, observability, support, and security diagrams without prematurely choosing security libraries, framework configuration, or implementation-specific controls.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-security-designer:architecture-security-designer to design security architecture for this system.",
+      "Use $architecture-security-designer:trust-boundary-mapper to map trust boundaries and threat surfaces.",
+      "Use $architecture-security-designer:security-review-gate to review this security design for architecture readiness."
+    ],
+    "brandColor": "#DC2626"
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Security Review Gate"
+  short_description: "Review security readiness."
+  brand_color: "#DC2626"
+  default_prompt: "Use $architecture-security-designer:security-review-gate to review this security design for architecture readiness."
