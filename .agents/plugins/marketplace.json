@@ -1,7 +1,7 @@
 {
-  "name": "local-architecture-tools",
+  "name": "komdosh-architect",
   "interface": {
-    "displayName": "Local Architecture Tools"
+    "displayName": "Komdosh Architect"
   },
   "plugins": [
     {

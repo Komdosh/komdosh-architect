@@ -9,13 +9,13 @@ It currently exposes the `architecture-diagrammer` plugin.
 codex plugin marketplace add https://github.com/Komdosh/komdosh-architect.git
 ```
 
-The repository name is `komdosh-architect`.
-The marketplace name remains `local-architecture-tools`, and the plugin name remains `architecture-diagrammer`.
+The repository and marketplace name is `komdosh-architect`.
+The plugin name remains `architecture-diagrammer`.
 
 To enable the plugin explicitly in `~/.codex/config.toml`:
 
 ```toml
-[plugins."architecture-diagrammer@local-architecture-tools"]
+[plugins."architecture-diagrammer@komdosh-architect"]
 enabled = true
 ```
 
