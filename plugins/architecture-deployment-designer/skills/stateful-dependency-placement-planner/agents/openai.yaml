@@ -1,0 +1,5 @@
+interface:
+  display_name: "Stateful Dependency Placement Planner"
+  short_description: "Place stateful dependencies."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:stateful-dependency-placement-planner to place databases, caches, queues, brokers, object stores, search, and files."

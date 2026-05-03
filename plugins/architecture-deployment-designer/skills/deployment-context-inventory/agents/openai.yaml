@@ -1,0 +1,5 @@
+interface:
+  display_name: "Deployment Context Inventory"
+  short_description: "Inventory deployment constraints."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:deployment-context-inventory to identify deployment inputs and runtime constraints."

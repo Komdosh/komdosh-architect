@@ -1,0 +1,5 @@
+interface:
+  display_name: "Runtime Topology Designer"
+  short_description: "Design deployment units."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:runtime-topology-designer to define deployment units and runtime topology."

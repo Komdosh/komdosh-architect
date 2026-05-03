@@ -1,0 +1,5 @@
+interface:
+  display_name: "Reliability DR Planner"
+  short_description: "Plan availability and recovery."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:reliability-dr-planner to plan availability, failover, backup, restore, RPO, RTO, and DR."

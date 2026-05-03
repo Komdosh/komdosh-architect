@@ -1,0 +1,5 @@
+interface:
+  display_name: "Environment Strategy Planner"
+  short_description: "Plan environments and placement."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:environment-strategy-planner to define environment, region, AZ, tenant, and data placement strategy."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Config Secrets Operations Planner"
+  short_description: "Plan config, secrets, and ops."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:config-secrets-operations-planner to define configuration, secrets, observability, alerting, runbooks, and support ownership."

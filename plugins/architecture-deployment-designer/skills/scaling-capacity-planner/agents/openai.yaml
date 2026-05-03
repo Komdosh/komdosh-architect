@@ -1,0 +1,5 @@
+interface:
+  display_name: "Scaling Capacity Planner"
+  short_description: "Plan scaling and capacity."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:scaling-capacity-planner to define scaling units, autoscaling signals, quotas, headroom, and cost constraints."

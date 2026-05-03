@@ -1,0 +1,5 @@
+interface:
+  display_name: "Rollout Release Planner"
+  short_description: "Plan releases and rollback."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:rollout-release-planner to define rollout, rollback, migration, compatibility, and release strategy."

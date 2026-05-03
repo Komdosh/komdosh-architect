@@ -1,0 +1,5 @@
+interface:
+  display_name: "Deployment Review Gate"
+  short_description: "Review deployment readiness."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:deployment-review-gate to review this deployment design for runtime readiness."

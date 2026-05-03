@@ -1,0 +1,5 @@
+interface:
+  display_name: "Network Boundary Designer"
+  short_description: "Design network boundaries."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:network-boundary-designer to define ingress, egress, trust zones, DNS, TLS, and gateway placement."

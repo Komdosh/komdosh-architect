@@ -1,0 +1,40 @@
+{
+  "name": "architecture-deployment-designer",
+  "version": "0.1.0",
+  "description": "Deployment architecture assistant for designing runtime topology, environments, network boundaries, scaling, rollout, reliability, DR, configuration, secrets, operations, and deployment diagrams.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "deployment-design",
+    "runtime-topology",
+    "environments",
+    "network-boundaries",
+    "scaling",
+    "rollout",
+    "reliability",
+    "disaster-recovery",
+    "operations",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Deployment Designer",
+    "shortDescription": "Designs runtime topology and deployment architecture.",
+    "longDescription": "Architecture Deployment Designer turns service, data, load, and integration decisions into deployment architecture. It defines deployment units, runtime topology, environments, region and availability-zone placement, network and trust boundaries, stateful dependency placement, scaling strategy, rollout and rollback strategy, reliability, disaster recovery, configuration, secrets, observability, operations, and deployment diagrams without prematurely writing infrastructure-as-code or platform manifests.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-deployment-designer:architecture-deployment-designer to design deployment architecture for this system.",
+      "Use $architecture-deployment-designer:runtime-topology-designer to define deployment units and runtime topology.",
+      "Use $architecture-deployment-designer:reliability-dr-planner to plan availability, failover, backup, and disaster recovery."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

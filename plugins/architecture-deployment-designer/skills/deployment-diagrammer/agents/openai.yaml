@@ -1,0 +1,5 @@
+interface:
+  display_name: "Deployment Diagrammer"
+  short_description: "Create deployment diagrams."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-deployment-designer:deployment-diagrammer to create deployment topology, environment, network, reliability, or rollout diagrams."
