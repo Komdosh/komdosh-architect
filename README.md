@@ -1,7 +1,7 @@
 # Komdosh Architect Marketplace
 
 Codex marketplace repository for Komdosh architecture tools.
-It currently exposes the `architecture-diagrammer` plugin.
+It currently exposes the `architecture-diagrammer` and `architect-requirementer` plugins.
 
 ## Install
 
@@ -9,18 +9,25 @@ It currently exposes the `architecture-diagrammer` plugin.
 codex plugin marketplace add https://github.com/Komdosh/komdosh-architect.git
 ```
 
-The repository and marketplace name is `komdosh-architect`.
-The plugin name remains `architecture-diagrammer`.
+The repository and marketplace names are `komdosh-architect`.
+Plugin names remain stable:
 
-To enable the plugin explicitly in `~/.codex/config.toml`:
+- `architecture-diagrammer`
+- `architect-requirementer`
+
+To enable plugins explicitly in `~/.codex/config.toml`:
 
 ```toml
 [plugins."architecture-diagrammer@komdosh-architect"]
+enabled = true
+
+[plugins."architect-requirementer@komdosh-architect"]
 enabled = true
 ```
 
 Restart Codex after adding or updating the marketplace so the plugin skills are loaded into the session context.
 
-## Plugin
+## Plugins
 
-The plugin package lives at [plugins/architecture-diagrammer](plugins/architecture-diagrammer).
+- [plugins/architecture-diagrammer](plugins/architecture-diagrammer)
+- [plugins/architect-requirementer](plugins/architect-requirementer)

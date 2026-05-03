@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Assumption Planner"
+  short_description: "Surface assumptions and expansion needs."
+  brand_color: "#14B8A6"
+  default_prompt: "Use $architect-requirementer:architecture-assumption-planner to make assumptions, expansion needs, and architecture implications explicit."

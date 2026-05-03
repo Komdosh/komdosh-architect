@@ -1,0 +1,5 @@
+interface:
+  display_name: "Functional Scope Modeler"
+  short_description: "Turn goals into functional requirements."
+  brand_color: "#14B8A6"
+  default_prompt: "Use $architect-requirementer:functional-scope-modeler to define functional scope and workflows."
