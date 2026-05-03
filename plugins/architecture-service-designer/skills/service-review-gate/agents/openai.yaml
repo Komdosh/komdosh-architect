@@ -1,0 +1,5 @@
+interface:
+  display_name: "Service Review Gate"
+  short_description: "Review service design readiness."
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $architecture-service-designer:service-review-gate to review this service design for architecture readiness."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Adapter Anti-Corruption Planner"
+  short_description: "Frame adapters and external boundaries."
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $architecture-service-designer:adapter-anti-corruption-planner to frame adapters and anti-corruption layers."

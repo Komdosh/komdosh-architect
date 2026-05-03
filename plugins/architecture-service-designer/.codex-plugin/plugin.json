@@ -1,0 +1,38 @@
+{
+  "name": "architecture-service-designer",
+  "version": "0.1.0",
+  "description": "Service-structure architecture assistant for turning bounded domain models into component and service candidates, responsibilities, collaborations, dependency rules, and service diagrams.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "service-design",
+    "component-design",
+    "service-boundaries",
+    "modular-architecture",
+    "collaboration",
+    "consistency",
+    "contracts",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Service Designer",
+    "shortDescription": "Designs service and component structure from domain boundaries.",
+    "longDescription": "Architecture Service Designer turns requirements, scope boundaries, and domain models into a top-level service or component structure. It identifies service candidates, module candidates, responsibilities, source-of-truth ownership, public and internal contract boundaries, collaboration styles, sync versus async interaction choices, consistency and transaction boundaries, dependency direction rules, adapters, anti-corruption layers, operational ownership, and service diagrams without prematurely choosing database schemas, cloud topology, or low-level endpoint details.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-service-designer:architecture-service-designer to design service and component boundaries for this bounded domain.",
+      "Use $architecture-service-designer:responsibility-boundary-designer to assign responsibilities and source-of-truth ownership.",
+      "Use $architecture-service-designer:service-diagrammer to create a component or service collaboration diagram."
+    ],
+    "brandColor": "#0EA5E9"
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Service Designer"
+  short_description: "Design service and component structure."
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $architecture-service-designer:architecture-service-designer to design service and component boundaries for this bounded domain."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Consistency Transaction Bounder"
+  short_description: "Frame consistency and transaction boundaries."
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $architecture-service-designer:consistency-transaction-bounder to identify consistency and transaction boundaries."

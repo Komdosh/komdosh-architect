@@ -1,0 +1,5 @@
+interface:
+  display_name: "Contract Collaboration Designer"
+  short_description: "Frame contracts and collaboration."
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $architecture-service-designer:contract-collaboration-designer to frame contracts and collaboration styles."

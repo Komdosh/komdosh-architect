@@ -1,0 +1,5 @@
+interface:
+  display_name: "Service Candidate Modeler"
+  short_description: "Identify service and component candidates."
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $architecture-service-designer:service-candidate-modeler to identify service, component, and module candidates."

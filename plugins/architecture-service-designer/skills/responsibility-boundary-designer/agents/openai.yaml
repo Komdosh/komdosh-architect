@@ -1,0 +1,5 @@
+interface:
+  display_name: "Responsibility Boundary Designer"
+  short_description: "Assign responsibilities and ownership."
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $architecture-service-designer:responsibility-boundary-designer to define responsibilities and source-of-truth ownership."

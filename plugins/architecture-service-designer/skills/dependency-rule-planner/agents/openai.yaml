@@ -1,0 +1,5 @@
+interface:
+  display_name: "Dependency Rule Planner"
+  short_description: "Define dependency and coupling rules."
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $architecture-service-designer:dependency-rule-planner to define dependency direction and coupling rules."

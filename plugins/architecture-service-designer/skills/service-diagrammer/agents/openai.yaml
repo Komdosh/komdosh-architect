@@ -1,0 +1,5 @@
+interface:
+  display_name: "Service Diagrammer"
+  short_description: "Create service and collaboration diagrams."
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $architecture-service-designer:service-diagrammer to create component or service collaboration diagrams."
