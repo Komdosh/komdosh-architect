@@ -1,0 +1,5 @@
+interface:
+  display_name: "Optimization Decision Advisor"
+  short_description: "Convert metrics into decisions."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:optimization-decision-advisor to connect load metrics to architecture decisions and optimization levers."

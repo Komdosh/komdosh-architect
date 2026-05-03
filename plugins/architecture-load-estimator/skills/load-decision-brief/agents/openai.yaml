@@ -1,0 +1,5 @@
+interface:
+  display_name: "Load Decision Brief"
+  short_description: "Summarize load decisions clearly."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:load-decision-brief to produce a concise decision-ready load summary."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Traffic Concurrency Estimator"
+  short_description: "Estimate traffic and concurrency."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:traffic-concurrency-estimator to estimate traffic, throughput, fan-out, and concurrency."

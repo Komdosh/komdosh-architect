@@ -1,0 +1,5 @@
+interface:
+  display_name: "Resource Capacity Estimator"
+  short_description: "Estimate resource and dependency pressure."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:resource-capacity-estimator to estimate CPU, memory, IO, network, worker, and external dependency pressure."

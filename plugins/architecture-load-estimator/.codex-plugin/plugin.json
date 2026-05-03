@@ -1,0 +1,38 @@
+{
+  "name": "architecture-load-estimator",
+  "version": "0.1.0",
+  "description": "Architecture assistant for concise, decision-useful load estimation across workload, traffic, concurrency, storage growth, resource capacity, bottlenecks, and optimization levers.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "load-estimation",
+    "capacity-planning",
+    "performance",
+    "scalability",
+    "traffic",
+    "concurrency",
+    "storage-growth",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Load Estimator",
+    "shortDescription": "Produces concise, decision-useful load estimates.",
+    "longDescription": "Architecture Load Estimator turns product, service, data, and quality context into clear load estimates that support architecture decisions. It profiles workload scenarios, estimates traffic, throughput, concurrency, data growth, storage, network, CPU, memory, IO, queues, external dependency pressure, latency budgets, saturation risks, optimization levers, confidence, assumptions, and validation needs. It favors ranges, formulas, and decision implications over fake precision.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-load-estimator:architecture-load-estimator to estimate load and decision metrics for this architecture.",
+      "Use $architecture-load-estimator:traffic-concurrency-estimator to calculate traffic, throughput, and concurrency estimates.",
+      "Use $architecture-load-estimator:load-decision-brief to summarize load-driven architecture decisions."
+    ],
+    "brandColor": "#EF4444"
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workload Scenario Profiler"
+  short_description: "Profile workload and peak scenarios."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:workload-scenario-profiler to define workload scenarios and peak assumptions."

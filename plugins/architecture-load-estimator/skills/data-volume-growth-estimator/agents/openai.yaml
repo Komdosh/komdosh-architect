@@ -1,0 +1,5 @@
+interface:
+  display_name: "Data Volume Growth Estimator"
+  short_description: "Estimate storage and data growth."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:data-volume-growth-estimator to estimate data volume, storage growth, retention, and bandwidth."

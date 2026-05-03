@@ -1,0 +1,5 @@
+interface:
+  display_name: "Load Review Gate"
+  short_description: "Review load estimate readiness."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:load-review-gate to review this load estimate for decision readiness."

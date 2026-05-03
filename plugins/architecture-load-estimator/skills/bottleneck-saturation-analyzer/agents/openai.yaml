@@ -1,0 +1,5 @@
+interface:
+  display_name: "Bottleneck Saturation Analyzer"
+  short_description: "Find bottlenecks and saturation risks."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:bottleneck-saturation-analyzer to identify bottlenecks and saturation risks."

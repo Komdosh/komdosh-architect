@@ -1,0 +1,5 @@
+interface:
+  display_name: "Load Diagrammer"
+  short_description: "Create load and hotspot diagrams."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:load-diagrammer to create load path or hotspot diagrams."

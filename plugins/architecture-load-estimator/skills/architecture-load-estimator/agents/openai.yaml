@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Load Estimator"
+  short_description: "Estimate load for architecture decisions."
+  brand_color: "#EF4444"
+  default_prompt: "Use $architecture-load-estimator:architecture-load-estimator to estimate load and decision metrics for this architecture."
