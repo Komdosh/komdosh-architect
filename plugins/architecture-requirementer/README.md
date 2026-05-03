@@ -1,6 +1,6 @@
-# Architect Requirementer
+# Architecture Requirementer
 
-Architect Requirementer is a Codex plugin for software architecture requirements work.
+Architecture Requirementer is a Codex plugin for software architecture requirements work.
 It turns product goals, domain context, constraints, and early ideas into a comprehensive requirements brief that a software architect can pick up without needing scattered background notes.
 
 ## Scope Fit
@@ -18,12 +18,12 @@ The plugin can describe architecture implications and constraints, but it should
 
 ## Skill Grouping
 
-- `$architect-requirementer:architect-requirementer`: orchestrates the full requirements pass.
-- `$architect-requirementer:product-goal-discovery`: clarifies product goals, users, business outcomes, and domain context.
-- `$architect-requirementer:functional-scope-modeler`: turns goals into functional requirements, workflows, data needs, and scope boundaries.
-- `$architect-requirementer:quality-attribute-requirements`: defines measurable non-functional requirements and quality scenarios.
-- `$architect-requirementer:architecture-assumption-planner`: makes useful assumptions explicit and identifies future expansion paths.
-- `$architect-requirementer:requirements-review-gate`: reviews the finished requirements brief for completeness and architecture readiness.
+- `$architecture-requirementer:architecture-requirementer`: orchestrates the full requirements pass.
+- `$architecture-requirementer:product-goal-discovery`: clarifies product goals, users, business outcomes, and domain context.
+- `$architecture-requirementer:functional-scope-modeler`: turns goals into functional requirements, workflows, data needs, and scope boundaries.
+- `$architecture-requirementer:quality-attribute-requirements`: defines measurable non-functional requirements and quality scenarios.
+- `$architecture-requirementer:architecture-assumption-planner`: makes useful assumptions explicit and identifies future expansion paths.
+- `$architecture-requirementer:requirements-review-gate`: reviews the finished requirements brief for completeness and architecture readiness.
 
 Use the namespaced skill form above in Codex prompts.
 The short skill names are directory names, not the guaranteed runtime invocation names.

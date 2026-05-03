@@ -2,4 +2,4 @@ interface:
   display_name: "Requirements Review Gate"
   short_description: "Review requirements before architecture design."
   brand_color: "#14B8A6"
-  default_prompt: "Use $architect-requirementer:requirements-review-gate to review this requirements brief for architecture readiness."
+  default_prompt: "Use $architecture-requirementer:requirements-review-gate to review this requirements brief for architecture readiness."

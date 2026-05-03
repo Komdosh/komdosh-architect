@@ -2,4 +2,4 @@ interface:
   display_name: "Product Goal Discovery"
   short_description: "Clarify product goals and domain context."
   brand_color: "#14B8A6"
-  default_prompt: "Use $architect-requirementer:product-goal-discovery to clarify goals, users, and product context."
+  default_prompt: "Use $architecture-requirementer:product-goal-discovery to clarify goals, users, and product context."

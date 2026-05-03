@@ -1,5 +1,0 @@
-interface:
-  display_name: "Architect Requirementer"
-  short_description: "Create architect-ready software requirements."
-  brand_color: "#14B8A6"
-  default_prompt: "Use $architect-requirementer:architect-requirementer to turn this product goal into an architect-ready requirements brief."

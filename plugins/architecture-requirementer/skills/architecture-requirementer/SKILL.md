@@ -1,9 +1,9 @@
 ---
-name: architect-requirementer
+name: architecture-requirementer
 description: Create comprehensive, self-contained software architecture requirements from product goals, covering functional requirements, non-functional requirements, assumptions, future expansion, and architecture handoff readiness.
 ---
 
-# Architect Requirementer
+# Architecture Requirementer
 
 ## Purpose
 
@@ -39,11 +39,11 @@ Ask only when a missing fact would make the requirements misleading or unsafe.
 
 ## Skill Flow
 
-1. Use `$architect-requirementer:product-goal-discovery` to identify goals, users, outcomes, domain context, and constraints.
-2. Use `$architect-requirementer:functional-scope-modeler` to define functional requirements, workflows, data needs, and boundaries.
-3. Use `$architect-requirementer:quality-attribute-requirements` to define measurable non-functional requirements.
-4. Use `$architect-requirementer:architecture-assumption-planner` to surface assumptions, future expansion, support concerns, and architecture implications.
-5. Use `$architect-requirementer:requirements-review-gate` before final delivery.
+1. Use `$architecture-requirementer:product-goal-discovery` to identify goals, users, outcomes, domain context, and constraints.
+2. Use `$architecture-requirementer:functional-scope-modeler` to define functional requirements, workflows, data needs, and boundaries.
+3. Use `$architecture-requirementer:quality-attribute-requirements` to define measurable non-functional requirements.
+4. Use `$architecture-requirementer:architecture-assumption-planner` to surface assumptions, future expansion, support concerns, and architecture implications.
+5. Use `$architecture-requirementer:requirements-review-gate` before final delivery.
 
 ## Output Contract
 

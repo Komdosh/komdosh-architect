@@ -17,10 +17,10 @@
       "category": "Developer Tools"
     },
     {
-      "name": "architect-requirementer",
+      "name": "architecture-requirementer",
       "source": {
         "source": "local",
-        "path": "./plugins/architect-requirementer"
+        "path": "./plugins/architecture-requirementer"
       },
       "policy": {
         "installation": "AVAILABLE",

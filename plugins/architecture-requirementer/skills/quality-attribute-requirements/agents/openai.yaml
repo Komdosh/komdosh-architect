@@ -2,4 +2,4 @@ interface:
   display_name: "Quality Attribute Requirements"
   short_description: "Define measurable non-functional requirements."
   brand_color: "#14B8A6"
-  default_prompt: "Use $architect-requirementer:quality-attribute-requirements to define measurable NFRs and quality scenarios."
+  default_prompt: "Use $architecture-requirementer:quality-attribute-requirements to define measurable NFRs and quality scenarios."
