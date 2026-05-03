@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Diagrammer"
+  short_description: "Create source-backed architecture diagrams."
+  brand_color: "#38BDF8"
+  default_prompt: "Use $architecture-diagrammer:architecture-diagrammer to turn this text into a source-backed diagram."

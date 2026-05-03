@@ -1,0 +1,5 @@
+interface:
+  display_name: "Diagram Layout Aligner"
+  short_description: "Align blocks for top-bottom and left-right reading."
+  brand_color: "#38BDF8"
+  default_prompt: "Use $architecture-diagrammer:diagram-layout-aligner to arrange this source-backed diagram."

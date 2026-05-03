@@ -1,0 +1,5 @@
+interface:
+  display_name: "Diagram Visual Styler"
+  short_description: "Apply simple high-contrast diagram styling."
+  brand_color: "#38BDF8"
+  default_prompt: "Use $architecture-diagrammer:diagram-visual-styler to style this source-backed diagram."

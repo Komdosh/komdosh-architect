@@ -1,0 +1,5 @@
+interface:
+  display_name: "Diagram Review Gate"
+  short_description: "Review architecture and presentation quality."
+  brand_color: "#38BDF8"
+  default_prompt: "Use $architecture-diagrammer:diagram-review-gate to check this diagram against SCHEMA."

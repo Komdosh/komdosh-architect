@@ -1,0 +1,5 @@
+interface:
+  display_name: "Diagram Exporter"
+  short_description: "Choose Mermaid, DrawIO, or Excalidraw output."
+  brand_color: "#38BDF8"
+  default_prompt: "Use $architecture-diagrammer:diagram-exporter to choose and validate the diagram format."

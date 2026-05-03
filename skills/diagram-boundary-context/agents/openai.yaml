@@ -1,0 +1,5 @@
+interface:
+  display_name: "Diagram Boundary Context"
+  short_description: "Find diagram scope, boundaries, and components."
+  brand_color: "#38BDF8"
+  default_prompt: "Use $architecture-diagrammer:diagram-boundary-context to identify source-backed diagram boundaries."

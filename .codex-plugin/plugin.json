@@ -1,0 +1,35 @@
+{
+  "name": "architecture-diagrammer",
+  "version": "0.1.0",
+  "description": "Diagram-only architecture assistant for turning source-backed architecture text into clear, standalone diagrams.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "diagrams",
+    "mermaid",
+    "drawio",
+    "excalidraw",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Diagrammer",
+    "shortDescription": "Turns source-backed architecture text into clean diagrams.",
+    "longDescription": "Architecture Diagrammer focuses only on the diagram view for software architecture work. It mirrors documented architecture text, checks scope fit before drawing, keeps source material as the authority, places necessary components inside the right boundary, aligns blocks for top-bottom and left-right reading, keeps styling simple and high contrast, manages connections to avoid clutter, and chooses Mermaid, DrawIO, or Excalidraw based on diagram complexity and requested delivery format.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-diagrammer:architecture-diagrammer to diagram this architecture text.",
+      "Use $architecture-diagrammer:diagram-review-gate to review this diagram.",
+      "Use $architecture-diagrammer:diagram-exporter to choose the diagram format."
+    ],
+    "brandColor": "#38BDF8"
+  }
+}

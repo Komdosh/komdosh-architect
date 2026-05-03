@@ -1,0 +1,5 @@
+interface:
+  display_name: "Diagram Connection Manager"
+  short_description: "Group and route diagram connections cleanly."
+  brand_color: "#38BDF8"
+  default_prompt: "Use $architecture-diagrammer:diagram-connection-manager to simplify source-backed connections."

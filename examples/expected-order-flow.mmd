@@ -1,0 +1,25 @@
+flowchart LR
+    customer["Customer mobile client"]
+    gateway["Public API gateway"]
+    orderService["Order Service"]
+    ordersDb[("PostgreSQL orders<br/>authoritative")]
+    events[["Event backbone<br/>order.confirmed"]]
+    search["Search Projection<br/>read model"]
+
+    customer -->|"Submit order"| gateway
+    gateway -->|"Forward valid command"| orderService
+    orderService -->|"Authoritative write"| ordersDb
+    orderService -.->|"Publish event"| events
+    events -.->|"Consume event"| search
+
+    classDef actor fill:#E0F2FE,stroke:#0284C7,color:#0F172A;
+    classDef service fill:#DCFCE7,stroke:#16A34A,color:#052E16;
+    classDef store fill:#FFEDD5,stroke:#F97316,color:#431407;
+    classDef event fill:#EDE9FE,stroke:#7C3AED,color:#2E1065;
+    classDef projection fill:#F1F5F9,stroke:#64748B,color:#0F172A;
+
+    class customer,gateway actor;
+    class orderService service;
+    class ordersDb store;
+    class events event;
+    class search projection;
