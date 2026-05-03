@@ -1,0 +1,20 @@
+{
+  "name": "local-architecture-tools",
+  "interface": {
+    "displayName": "Local Architecture Tools"
+  },
+  "plugins": [
+    {
+      "name": "architecture-diagrammer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/architecture-diagrammer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
