@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Domain Modeler"
+  short_description: "Model domain concepts before design."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-domain-modeler:architecture-domain-modeler to model the domain for this bounded scope."

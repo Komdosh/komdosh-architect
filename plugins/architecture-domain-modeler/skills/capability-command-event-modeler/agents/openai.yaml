@@ -1,0 +1,5 @@
+interface:
+  display_name: "Capability Command Event Modeler"
+  short_description: "Map capabilities, commands, and events."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-domain-modeler:capability-command-event-modeler to map capabilities, commands, queries, and events."

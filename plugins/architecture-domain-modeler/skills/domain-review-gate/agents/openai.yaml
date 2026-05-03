@@ -1,0 +1,5 @@
+interface:
+  display_name: "Domain Review Gate"
+  short_description: "Review domain model readiness."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-domain-modeler:domain-review-gate to review this domain model for architecture readiness."

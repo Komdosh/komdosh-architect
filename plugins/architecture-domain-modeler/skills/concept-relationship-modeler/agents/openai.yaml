@@ -1,0 +1,5 @@
+interface:
+  display_name: "Concept Relationship Modeler"
+  short_description: "Model concepts and relationships."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-domain-modeler:concept-relationship-modeler to identify domain concepts and relationships."

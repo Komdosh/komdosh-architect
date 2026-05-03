@@ -1,0 +1,5 @@
+interface:
+  display_name: "Domain Diagrammer"
+  short_description: "Create domain concept and lifecycle diagrams."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-domain-modeler:domain-diagrammer to create concept, lifecycle, or capability diagrams."

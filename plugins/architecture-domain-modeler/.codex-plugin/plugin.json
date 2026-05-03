@@ -1,0 +1,38 @@
+{
+  "name": "architecture-domain-modeler",
+  "version": "0.1.0",
+  "description": "Domain-shaping architecture assistant for modeling business concepts, relationships, lifecycles, invariants, capabilities, commands, events, and domain diagrams before service design.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "domain-modeling",
+    "domain-driven-design",
+    "business-rules",
+    "capability-modeling",
+    "state-lifecycle",
+    "commands",
+    "events",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Domain Modeler",
+    "shortDescription": "Models the domain before service and data design.",
+    "longDescription": "Architecture Domain Modeler is an early architecture workflow plugin for shaping the domain model after requirements and scope are understood. It clarifies domain language, concepts, relationships, lifecycles, business rules, invariants, policies, capabilities, command and event vocabulary, source-of-truth candidates, ambiguity, and domain diagrams. It prepares a first-class system designer for later service, API, data, and integration design without prematurely choosing implementation structure.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-domain-modeler:architecture-domain-modeler to model the domain for this bounded system scope.",
+      "Use $architecture-domain-modeler:rule-invariant-cataloger to identify business rules, invariants, and policies.",
+      "Use $architecture-domain-modeler:domain-diagrammer to create a concept map and lifecycle diagram."
+    ],
+    "brandColor": "#F59E0B"
+  }
+}

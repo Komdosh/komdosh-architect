@@ -1,0 +1,5 @@
+interface:
+  display_name: "Domain Language Mapper"
+  short_description: "Clarify glossary and domain language."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-domain-modeler:domain-language-mapper to build the domain glossary and identify ambiguous terms."

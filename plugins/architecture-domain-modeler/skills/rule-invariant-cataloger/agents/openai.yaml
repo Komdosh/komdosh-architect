@@ -1,0 +1,5 @@
+interface:
+  display_name: "Rule Invariant Cataloger"
+  short_description: "Catalog rules, policies, and invariants."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-domain-modeler:rule-invariant-cataloger to identify business rules and invariants."

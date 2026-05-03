@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lifecycle State Modeler"
+  short_description: "Map states and transitions."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-domain-modeler:lifecycle-state-modeler to model key domain lifecycles and transitions."
