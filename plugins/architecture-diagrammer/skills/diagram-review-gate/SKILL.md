@@ -66,6 +66,18 @@ Then run human-presentation checks:
 | Label clearance | Do labeled connectors have enough empty space, or should blocks be moved apart before delivery? |
 | Visual balance | Does the diagram avoid cramped regions, awkward empty areas, and distracting edge tangles? |
 
+## Readability Check
+
+Treat readability as part of review quality:
+
+- the diagram purpose is visible first
+- wording is plain and compact
+- labels and notes support nearby diagram elements instead of hiding the main view
+- only important decisions, risks, assumptions, open questions, and next steps are highlighted
+- necessary technical terms are explained in place
+
+Mark as Major when professional complexity, long notes, or scattered details make the diagram hard to use.
+
 ## Findings
 
 Classify issues:

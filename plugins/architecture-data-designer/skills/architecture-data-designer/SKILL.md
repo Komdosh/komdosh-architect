@@ -12,6 +12,18 @@ The result must help a system designer understand who owns authoritative data, h
 
 Use this skill when the user asks for data architecture, data ownership, source-of-truth boundaries, data flows, read models, projections, reporting/search/analytics data, privacy/retention, migration/backfill, or data contract framing.
 
+## Human Readability Rule
+
+Every output must be easy for humans to read:
+
+- start each section with the main idea or decision in plain words
+- keep the document compact and remove decorative explanation
+- use short sections, tables, and bullets for scanning
+- prefer clear words over professional-sounding complexity
+- keep details near the point they explain
+- highlight only important decisions, risks, assumptions, open questions, and handoff steps
+- explain necessary technical terms in place
+
 ## Core Rule
 
 Design data responsibility, not physical storage:

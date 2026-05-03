@@ -12,6 +12,18 @@ The result must help a software architect understand what needs to be built, why
 
 Use this skill when the user asks for requirements, software requirements, functional requirements, non-functional requirements, product-to-architecture handoff, architect-ready specification, or deep product requirement analysis.
 
+## Human Readability Rule
+
+Every output must be easy for humans to read:
+
+- start each section with the main idea or decision in plain words
+- keep the document compact and remove decorative explanation
+- use short sections, tables, and bullets for scanning
+- prefer clear words over professional-sounding complexity
+- keep details near the point they explain
+- highlight only important decisions, risks, assumptions, open questions, and handoff steps
+- explain necessary technical terms in place
+
 ## Core Rule
 
 Understand the product before writing requirements:

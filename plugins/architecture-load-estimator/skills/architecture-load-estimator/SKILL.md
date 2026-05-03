@@ -12,6 +12,18 @@ The result must be concise, clear, and useful for deciding whether the architect
 
 Use this skill when the user asks for load estimation, capacity planning, traffic estimates, performance sizing, scalability assumptions, peak load, storage growth, resource pressure, bottleneck analysis, or load-driven architecture decisions.
 
+## Human Readability Rule
+
+Every output must be easy for humans to read:
+
+- start each section with the main idea or decision in plain words
+- keep the document compact and remove decorative explanation
+- use short sections, tables, and bullets for scanning
+- prefer clear words over professional-sounding complexity
+- keep details near the point they explain
+- highlight only important decisions, risks, assumptions, open questions, and handoff steps
+- explain necessary technical terms in place
+
 ## Core Rule
 
 Provide real decision information, not fake precision:

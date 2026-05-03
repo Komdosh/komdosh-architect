@@ -17,6 +17,18 @@ Use it when the requested outcome is:
 
 Before drawing, the plugin must check that the diagram does not silently expand the requested scope or contradict source-backed architecture constraints such as ownership, source of truth, trust boundaries, idempotent callbacks, downstream projections, and API/event boundaries.
 
+## Human-Readable Output
+
+Prefer readability over professional complexity.
+Outputs should be compact, self-contained, and easy to scan.
+
+- put the main idea or decision first
+- use plain words before specialist terms
+- highlight only important decisions, risks, assumptions, open questions, and next steps
+- keep details close to the point they explain
+- avoid long paragraphs and decorative wording
+- explain necessary technical terms in place
+
 ## Skill Grouping
 
 - `$architecture-diagrammer:architecture-diagrammer`: orchestrates the full diagram pass.

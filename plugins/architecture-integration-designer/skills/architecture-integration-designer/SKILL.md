@@ -12,6 +12,18 @@ The result must help a system designer define integration surfaces, API contract
 
 Use this skill when the user asks for API design strategy, integration architecture, external-system integration, service-to-service contracts, event design, webhook design, batch/file integration, versioning, idempotency, retries, or integration diagrams.
 
+## Human Readability Rule
+
+Every output must be easy for humans to read:
+
+- start each section with the main idea or decision in plain words
+- keep the document compact and remove decorative explanation
+- use short sections, tables, and bullets for scanning
+- prefer clear words over professional-sounding complexity
+- keep details near the point they explain
+- highlight only important decisions, risks, assumptions, open questions, and handoff steps
+- explain necessary technical terms in place
+
 ## Core Rule
 
 Treat APIs and integration contracts as first-class architecture:

@@ -22,6 +22,18 @@ Use this plugin when the requested outcome is:
 This plugin should design data responsibilities, not physical data storage.
 It may state architecture implications, but it must not choose database engines, table schemas, index design, warehouse topology, or low-level serialization formats unless the user explicitly asks for a later-stage design.
 
+## Human-Readable Output
+
+Prefer readability over professional complexity.
+Outputs should be compact, self-contained, and easy to scan.
+
+- put the main idea or decision first
+- use plain words before specialist terms
+- highlight only important decisions, risks, assumptions, open questions, and next steps
+- keep details close to the point they explain
+- avoid long paragraphs and decorative wording
+- explain necessary technical terms in place
+
 ## Skill Grouping
 
 - `$architecture-data-designer:architecture-data-designer`: orchestrates the full data-design pass.

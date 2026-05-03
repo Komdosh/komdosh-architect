@@ -21,6 +21,18 @@ Use this plugin when the requested outcome is:
 This plugin treats APIs as first-class design artifacts.
 APIs are easy to extend when designed carefully, but expensive to change or remove after consumers depend on them.
 
+## Human-Readable Output
+
+Prefer readability over professional complexity.
+Outputs should be compact, self-contained, and easy to scan.
+
+- put the main idea or decision first
+- use plain words before specialist terms
+- highlight only important decisions, risks, assumptions, open questions, and next steps
+- keep details close to the point they explain
+- avoid long paragraphs and decorative wording
+- explain necessary technical terms in place
+
 ## Skill Grouping
 
 - `$architecture-integration-designer:architecture-integration-designer`: orchestrates the full integration-design pass.

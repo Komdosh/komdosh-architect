@@ -12,6 +12,18 @@ The diagram is a mirror of the text, not a new architecture proposal.
 
 Use this skill when the user asks for an architecture diagram, diagram review, Mermaid, DrawIO, Excalidraw, schema visualization, or a diagram-focused agent pass.
 
+## Human Readability Rule
+
+Every output must be easy for humans to read:
+
+- start each section with the main idea or decision in plain words
+- keep the document compact and remove decorative explanation
+- use short sections, tables, and bullets for scanning
+- prefer clear words over professional-sounding complexity
+- keep details near the point they explain
+- highlight only important decisions, risks, assumptions, open questions, and handoff steps
+- explain necessary technical terms in place
+
 ## Core Rule
 
 Think only about the diagram view:

@@ -17,6 +17,18 @@ Use this plugin when the requested outcome is:
 This plugin is only one top-level step in the full architecture workflow.
 It should frame the boundary and context, not produce detailed service decomposition, database design, deployment topology, or final API schemas.
 
+## Human-Readable Output
+
+Prefer readability over professional complexity.
+Outputs should be compact, self-contained, and easy to scan.
+
+- put the main idea or decision first
+- use plain words before specialist terms
+- highlight only important decisions, risks, assumptions, open questions, and next steps
+- keep details close to the point they explain
+- avoid long paragraphs and decorative wording
+- explain necessary technical terms in place
+
 ## Skill Grouping
 
 - `$architecture-scope-bounder:architecture-scope-bounder`: orchestrates the full scope-boundary pass.

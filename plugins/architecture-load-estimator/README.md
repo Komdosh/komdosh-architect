@@ -20,6 +20,18 @@ Use this plugin when the requested outcome is:
 This plugin provides estimates for architecture decisions, not benchmark proof.
 It should be concise, clear, and explicit about formulas, assumptions, confidence, and what must be measured later.
 
+## Human-Readable Output
+
+Prefer readability over professional complexity.
+Outputs should be compact, self-contained, and easy to scan.
+
+- put the main idea or decision first
+- use plain words before specialist terms
+- highlight only important decisions, risks, assumptions, open questions, and next steps
+- keep details close to the point they explain
+- avoid long paragraphs and decorative wording
+- explain necessary technical terms in place
+
 ## Skill Grouping
 
 - `$architecture-load-estimator:architecture-load-estimator`: orchestrates the full load-estimation pass.

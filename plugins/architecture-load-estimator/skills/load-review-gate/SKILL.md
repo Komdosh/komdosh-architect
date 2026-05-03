@@ -32,6 +32,18 @@ Use `METRIC`:
 | `I` Implications | Does each important metric support a decision or optimization option? |
 | `C` Concision | Is the final brief clear and short enough for architecture review? |
 
+## Readability Check
+
+Treat readability as part of review quality:
+
+- main ideas and decisions are visible first
+- wording is plain and compact
+- details support nearby points instead of hiding them
+- only important decisions, risks, assumptions, open questions, and next steps are highlighted
+- necessary technical terms are explained in place
+
+Mark as Major when professional complexity, long prose, or scattered details make the document hard to use.
+
 ## Blockers
 
 Treat these as blockers:

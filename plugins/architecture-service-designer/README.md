@@ -21,6 +21,18 @@ Use this plugin when the requested outcome is:
 This plugin should design the system structure, not implementation details.
 It may state architecture implications and contract responsibilities, but it must not write final API schemas, database schemas, deployment topology, cloud resource plans, or framework-specific module code.
 
+## Human-Readable Output
+
+Prefer readability over professional complexity.
+Outputs should be compact, self-contained, and easy to scan.
+
+- put the main idea or decision first
+- use plain words before specialist terms
+- highlight only important decisions, risks, assumptions, open questions, and next steps
+- keep details close to the point they explain
+- avoid long paragraphs and decorative wording
+- explain necessary technical terms in place
+
 ## Skill Grouping
 
 - `$architecture-service-designer:architecture-service-designer`: orchestrates the full service-design pass.

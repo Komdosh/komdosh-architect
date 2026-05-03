@@ -16,6 +16,18 @@ Use this plugin when the requested outcome is:
 Do not use it as a solution-design shortcut.
 The plugin can describe architecture implications and constraints, but it should not choose a detailed implementation unless the user explicitly asks for architecture design.
 
+## Human-Readable Output
+
+Prefer readability over professional complexity.
+Outputs should be compact, self-contained, and easy to scan.
+
+- put the main idea or decision first
+- use plain words before specialist terms
+- highlight only important decisions, risks, assumptions, open questions, and next steps
+- keep details close to the point they explain
+- avoid long paragraphs and decorative wording
+- explain necessary technical terms in place
+
 ## Skill Grouping
 
 - `$architecture-requirementer:architecture-requirementer`: orchestrates the full requirements pass.

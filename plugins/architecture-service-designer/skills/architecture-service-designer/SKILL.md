@@ -12,6 +12,18 @@ The result must help a system designer understand what structural units should e
 
 Use this skill when the user asks for service design, component design, module boundaries, service decomposition, container diagram, collaboration design, contract boundaries, dependency rules, or top-level system structure.
 
+## Human Readability Rule
+
+Every output must be easy for humans to read:
+
+- start each section with the main idea or decision in plain words
+- keep the document compact and remove decorative explanation
+- use short sections, tables, and bullets for scanning
+- prefer clear words over professional-sounding complexity
+- keep details near the point they explain
+- highlight only important decisions, risks, assumptions, open questions, and handoff steps
+- explain necessary technical terms in place
+
 ## Core Rule
 
 Design structure, not implementation detail:

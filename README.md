@@ -55,6 +55,18 @@ enabled = true
 
 Restart Codex after adding or updating the marketplace so the plugin skills are loaded into the session context.
 
+## Human-Readable Outputs
+
+All plugins must prefer readability over professional complexity.
+Architecture documents should be compact, self-contained, and easy to scan.
+
+- put the main idea or decision first
+- use plain words before specialist terms
+- highlight only important decisions, risks, assumptions, open questions, and next steps
+- keep details close to the point they explain
+- avoid long paragraphs and decorative wording
+- explain necessary technical terms in place
+
 ## Plugins
 
 - [plugins/architecture-diagrammer](plugins/architecture-diagrammer)
