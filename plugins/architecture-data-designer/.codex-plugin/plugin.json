@@ -1,0 +1,39 @@
+{
+  "name": "architecture-data-designer",
+  "version": "0.1.0",
+  "description": "Data-architecture assistant for defining data ownership, source-of-truth boundaries, flows, read models, lifecycle, privacy, migration, and data contracts before storage design.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "data-architecture",
+    "data-ownership",
+    "source-of-truth",
+    "data-flow",
+    "read-models",
+    "privacy",
+    "retention",
+    "migration",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Data Designer",
+    "shortDescription": "Designs data ownership and data movement responsibilities.",
+    "longDescription": "Architecture Data Designer turns service and domain boundaries into data architecture responsibilities. It defines authoritative data ownership, data boundary candidates, write models versus read models, duplicated and reference data rules, consistency and freshness expectations, data flows, projection candidates, audit and history needs, privacy and retention boundaries, migration and backfill concerns, and data contract ownership without prematurely choosing database products, physical schemas, or storage topology.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-data-designer:architecture-data-designer to define data ownership and data movement for this service design.",
+      "Use $architecture-data-designer:data-ownership-bounder to clarify source-of-truth ownership.",
+      "Use $architecture-data-designer:data-diagrammer to create a data ownership map or data flow diagram."
+    ],
+    "brandColor": "#10B981"
+  }
+}

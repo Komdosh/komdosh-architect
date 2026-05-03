@@ -1,0 +1,5 @@
+interface:
+  display_name: "Data Diagrammer"
+  short_description: "Create data ownership and flow diagrams."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:data-diagrammer to create data ownership maps or data flow diagrams."

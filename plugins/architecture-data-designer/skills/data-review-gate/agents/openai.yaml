@@ -1,0 +1,5 @@
+interface:
+  display_name: "Data Review Gate"
+  short_description: "Review data architecture readiness."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:data-review-gate to review this data design for architecture readiness."

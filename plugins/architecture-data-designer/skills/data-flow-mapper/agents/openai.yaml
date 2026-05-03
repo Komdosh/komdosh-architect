@@ -1,0 +1,5 @@
+interface:
+  display_name: "Data Flow Mapper"
+  short_description: "Map data movement and freshness."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:data-flow-mapper to map data movement, freshness, and consistency expectations."

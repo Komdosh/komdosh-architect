@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lifecycle Retention Privacy Planner"
+  short_description: "Plan lifecycle, retention, and privacy."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:lifecycle-retention-privacy-planner to define data lifecycle, retention, deletion, privacy, and audit expectations."

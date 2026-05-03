@@ -1,0 +1,5 @@
+interface:
+  display_name: "Data Boundary Modeler"
+  short_description: "Model write/read/derived data boundaries."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:data-boundary-modeler to identify data boundaries, write models, and read models."

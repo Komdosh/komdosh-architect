@@ -1,0 +1,5 @@
+interface:
+  display_name: "Data Ownership Bounder"
+  short_description: "Define source-of-truth ownership."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:data-ownership-bounder to clarify data ownership and source-of-truth boundaries."

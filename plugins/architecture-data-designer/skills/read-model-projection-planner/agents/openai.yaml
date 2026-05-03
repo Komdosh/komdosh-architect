@@ -1,0 +1,5 @@
+interface:
+  display_name: "Read Model Projection Planner"
+  short_description: "Plan read models and projections."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:read-model-projection-planner to frame read models, projections, search, reporting, and analytics data."

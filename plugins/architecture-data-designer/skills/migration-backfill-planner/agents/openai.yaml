@@ -1,0 +1,5 @@
+interface:
+  display_name: "Migration Backfill Planner"
+  short_description: "Frame migration and backfill concerns."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:migration-backfill-planner to frame migration, backfill, coexistence, and reconciliation concerns."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Data Contract Designer"
+  short_description: "Frame data contracts and compatibility."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:data-contract-designer to frame data contract ownership, compatibility, and quality expectations."

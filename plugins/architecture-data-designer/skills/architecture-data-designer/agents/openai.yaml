@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Data Designer"
+  short_description: "Design data ownership and movement."
+  brand_color: "#10B981"
+  default_prompt: "Use $architecture-data-designer:architecture-data-designer to define data ownership and data movement responsibilities."
