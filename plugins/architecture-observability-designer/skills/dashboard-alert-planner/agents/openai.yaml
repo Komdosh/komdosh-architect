@@ -1,0 +1,5 @@
+interface:
+  display_name: "Dashboard Alert Planner"
+  short_description: "Plan dashboards and alerts."
+  brand_color: "#0891B2"
+  default_prompt: "Use $architecture-observability-designer:dashboard-alert-planner to define dashboards, alerts, severity, escalation, and noise control."

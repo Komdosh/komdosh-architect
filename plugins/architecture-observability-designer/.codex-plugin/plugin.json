@@ -1,0 +1,40 @@
+{
+  "name": "architecture-observability-designer",
+  "version": "0.1.0",
+  "description": "Observability architecture assistant for designing SLIs, SLOs, logs, metrics, traces, correlation, dashboards, alerts, diagnostics, incident support, telemetry ownership, retention, and observability diagrams.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "observability-design",
+    "sli",
+    "slo",
+    "logging",
+    "metrics",
+    "tracing",
+    "alerts",
+    "dashboards",
+    "incident-response",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Observability Designer",
+    "shortDescription": "Designs observability and operational visibility.",
+    "longDescription": "Architecture Observability Designer turns requirements, service, data, load, integration, deployment, and security context into observability architecture. It defines user-visible health, SLIs, SLOs, logs, metrics, traces, correlation IDs, dashboards, alerts, diagnostic context, error taxonomy, business and security signals, incident investigation, runbook inputs, telemetry ownership, retention, cost guardrails, and observability diagrams without prematurely choosing vendors, agents, collectors, or code instrumentation details.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-observability-designer:architecture-observability-designer to design observability architecture for this system.",
+      "Use $architecture-observability-designer:sli-slo-health-designer to define user-visible health, SLIs, and SLOs.",
+      "Use $architecture-observability-designer:observability-review-gate to review this observability design for architecture readiness."
+    ],
+    "brandColor": "#0891B2"
+  }
+}

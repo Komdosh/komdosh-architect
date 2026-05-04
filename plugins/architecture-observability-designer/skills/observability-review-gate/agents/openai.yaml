@@ -1,0 +1,5 @@
+interface:
+  display_name: "Observability Review Gate"
+  short_description: "Review observability readiness."
+  brand_color: "#0891B2"
+  default_prompt: "Use $architecture-observability-designer:observability-review-gate to review this observability design for architecture readiness."

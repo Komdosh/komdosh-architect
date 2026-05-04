@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Observability Designer"
+  short_description: "Design observability architecture."
+  brand_color: "#0891B2"
+  default_prompt: "Use $architecture-observability-designer:architecture-observability-designer to design observability architecture for this system."
