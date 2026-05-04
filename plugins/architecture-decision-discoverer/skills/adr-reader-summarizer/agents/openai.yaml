@@ -1,0 +1,5 @@
+interface:
+  display_name: "ADR Reader Summarizer"
+  short_description: "Read and summarize ADRs."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:adr-reader-summarizer to read ADRs and extract status, decisions, alternatives, consequences, and relevance."

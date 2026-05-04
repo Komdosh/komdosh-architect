@@ -1,0 +1,5 @@
+interface:
+  display_name: "Decision Drift Detector"
+  short_description: "Detect decision drift."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:decision-drift-detector to check current architecture work against existing ADRs and decisions."

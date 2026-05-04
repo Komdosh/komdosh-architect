@@ -1,0 +1,5 @@
+interface:
+  display_name: "Decision Context Brief Builder"
+  short_description: "Build decision brief."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:decision-context-brief-builder to produce a compact decision-context brief from discovered ADRs and decision notes."

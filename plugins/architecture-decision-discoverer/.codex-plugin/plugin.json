@@ -1,0 +1,39 @@
+{
+  "name": "architecture-decision-discoverer",
+  "version": "0.1.0",
+  "description": "Architecture decision discovery assistant for finding ADRs and decision notes across local files, related repos, MCP/RAG, memory, and AI context sources, then extracting constraints, drift risks, and decision context without writing ADRs.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "adr",
+    "decision-discovery",
+    "architecture-decisions",
+    "decision-context",
+    "rag",
+    "mcp",
+    "memory",
+    "architecture-governance",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Decision Discoverer",
+    "shortDescription": "Finds ADRs and extracts decision context.",
+    "longDescription": "Architecture Decision Discoverer finds existing ADRs, decision notes, and architecture constraints across local files, related repositories, MCP/RAG tools, raw memory, and other available AI context sources. It reads decisions as source-of-truth context, extracts constraints, consequences, rejected alternatives, assumptions, revisit triggers, and drift risks, and produces compact decision-context briefs. It may create short temporary working notes for comprehension, but writing or updating ADRs is explicitly out of scope.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-decision-discoverer:architecture-decision-discoverer to discover existing ADRs and decision context before this architecture work.",
+      "Use $architecture-decision-discoverer:decision-source-finder to search local files, related repos, MCP/RAG, memory, and AI context sources for ADRs.",
+      "Use $architecture-decision-discoverer:decision-drift-detector to check this design against existing architecture decisions."
+    ],
+    "brandColor": "#475569"
+  }
+}

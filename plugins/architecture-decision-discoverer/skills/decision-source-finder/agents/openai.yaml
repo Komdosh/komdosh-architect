@@ -1,0 +1,5 @@
+interface:
+  display_name: "Decision Source Finder"
+  short_description: "Find ADR sources."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:decision-source-finder to search local files, related repos, MCP/RAG, memory, and AI context sources for ADRs."

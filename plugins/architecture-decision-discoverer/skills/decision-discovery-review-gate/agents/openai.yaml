@@ -1,0 +1,5 @@
+interface:
+  display_name: "Decision Discovery Review Gate"
+  short_description: "Review decision discovery."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:decision-discovery-review-gate to review this decision-context brief for discovery readiness."

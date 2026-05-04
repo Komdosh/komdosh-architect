@@ -1,0 +1,5 @@
+interface:
+  display_name: "Decision Constraint Extractor"
+  short_description: "Extract constraints."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:decision-constraint-extractor to extract constraints, defaults, forbidden paths, assumptions, and revisit triggers from decisions."

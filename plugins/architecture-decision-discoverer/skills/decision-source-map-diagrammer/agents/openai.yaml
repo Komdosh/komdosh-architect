@@ -1,0 +1,5 @@
+interface:
+  display_name: "Decision Source Map Diagrammer"
+  short_description: "Map decision sources."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:decision-source-map-diagrammer to map ADR sources, constraints, and decision-context gaps."

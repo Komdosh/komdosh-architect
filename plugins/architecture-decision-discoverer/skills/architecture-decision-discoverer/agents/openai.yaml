@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Decision Discoverer"
+  short_description: "Find ADRs and decision context."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:architecture-decision-discoverer to discover existing ADRs and decision context before this architecture work."

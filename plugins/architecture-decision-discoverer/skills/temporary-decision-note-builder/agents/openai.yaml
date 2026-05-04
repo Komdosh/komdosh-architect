@@ -1,0 +1,5 @@
+interface:
+  display_name: "Temporary Decision Note Builder"
+  short_description: "Build temporary notes."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:temporary-decision-note-builder to create a short non-authoritative working note from discovered decisions."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Future ADR Question Planner"
+  short_description: "Find future ADR needs."
+  brand_color: "#475569"
+  default_prompt: "Use $architecture-decision-discoverer:future-adr-question-planner to identify decisions that may need a future ADR without writing it."
