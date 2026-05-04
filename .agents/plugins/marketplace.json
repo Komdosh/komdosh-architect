@@ -147,6 +147,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Developer Tools"
+    },
+    {
+      "name": "architecture-risk-evaluator",
+      "source": {
+        "source": "local",
+        "path": "./plugins/architecture-risk-evaluator"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
     }
   ]
 }

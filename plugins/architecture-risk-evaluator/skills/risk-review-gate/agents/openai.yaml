@@ -1,0 +1,5 @@
+interface:
+  display_name: "Risk Review Gate"
+  short_description: "Review risk evaluation."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:risk-review-gate to review this architecture risk evaluation for readiness."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Risk Diagrammer"
+  short_description: "Create risk diagrams."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:risk-diagrammer to create risk maps, heat maps, dependency-risk maps, or readiness diagrams."

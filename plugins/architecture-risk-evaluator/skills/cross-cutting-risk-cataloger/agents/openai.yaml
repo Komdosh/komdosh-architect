@@ -1,0 +1,5 @@
+interface:
+  display_name: "Cross-Cutting Risk Cataloger"
+  short_description: "Catalog architecture risks."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:cross-cutting-risk-cataloger to catalog product, technical, data, integration, security, deployment, operational, delivery, and decision risks."

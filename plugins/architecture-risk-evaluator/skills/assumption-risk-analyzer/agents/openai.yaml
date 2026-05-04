@@ -1,0 +1,5 @@
+interface:
+  display_name: "Assumption Risk Analyzer"
+  short_description: "Analyze risky assumptions."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:assumption-risk-analyzer to find assumptions that can fail and how to validate them."

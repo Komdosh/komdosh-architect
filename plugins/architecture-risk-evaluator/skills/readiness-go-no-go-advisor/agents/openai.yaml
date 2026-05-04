@@ -1,0 +1,5 @@
+interface:
+  display_name: "Readiness Go No Go Advisor"
+  short_description: "Assess readiness."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:readiness-go-no-go-advisor to assess architecture readiness and go/no-go conditions."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Validation Spike Planner"
+  short_description: "Plan validation work."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:validation-spike-planner to define spikes, benchmarks, prototypes, research, and proof points for architecture risks."

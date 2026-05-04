@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Risk Evaluator"
+  short_description: "Evaluate architecture risks."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:architecture-risk-evaluator to evaluate architecture risks before implementation."

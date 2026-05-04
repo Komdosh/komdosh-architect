@@ -1,0 +1,5 @@
+interface:
+  display_name: "Risk Context Inventory"
+  short_description: "Inventory risk context."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:risk-context-inventory to identify source context, evaluation boundary, assumptions, and coverage gaps."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Mitigation Owner Planner"
+  short_description: "Plan mitigation owners."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:mitigation-owner-planner to assign mitigation options, owners, triggers, fallback paths, and residual risk."

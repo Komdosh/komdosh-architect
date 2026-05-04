@@ -1,0 +1,39 @@
+{
+  "name": "architecture-risk-evaluator",
+  "version": "0.1.0",
+  "description": "Architecture risk evaluation assistant for finding, prioritizing, and communicating technical, product, security, data, integration, deployment, operational, delivery, and decision risks before implementation.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "risk-evaluation",
+    "risk-register",
+    "architecture-risks",
+    "readiness",
+    "validation",
+    "tradeoffs",
+    "mitigation",
+    "go-no-go",
+    "system-design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Risk Evaluator",
+    "shortDescription": "Evaluates architecture risks and readiness.",
+    "longDescription": "Architecture Risk Evaluator reviews architecture-stage context to surface technical, product, security, data, integration, deployment, operational, delivery, and decision risks before implementation. It prioritizes risks by likelihood and impact, identifies fragile assumptions, tradeoffs, validation spikes, mitigation owners, go/no-go readiness, and produces compact risk registers. It makes risk visible and actionable without rewriting the architecture or pretending every risk can be solved immediately.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-risk-evaluator:architecture-risk-evaluator to evaluate architecture risks before implementation.",
+      "Use $architecture-risk-evaluator:risk-register-builder to create a compact architecture risk register.",
+      "Use $architecture-risk-evaluator:readiness-go-no-go-advisor to assess architecture readiness and go/no-go conditions."
+    ],
+    "brandColor": "#F59E0B"
+  }
+}

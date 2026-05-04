@@ -1,0 +1,5 @@
+interface:
+  display_name: "Impact Likelihood Prioritizer"
+  short_description: "Prioritize risks."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:impact-likelihood-prioritizer to rank risks by likelihood, impact, urgency, confidence, and blast radius."

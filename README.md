@@ -1,7 +1,7 @@
 # Komdosh Architect Marketplace
 
 Codex marketplace repository for Komdosh architecture tools.
-It currently exposes the `architecture-diagrammer`, `architecture-requirementer`, `architecture-scope-bounder`, `architecture-domain-modeler`, `architecture-service-designer`, `architecture-data-designer`, `architecture-load-estimator`, `architecture-integration-designer`, `architecture-deployment-designer`, `architecture-security-designer`, `architecture-observability-designer`, and `architecture-decision-discoverer` plugins.
+It currently exposes the `architecture-diagrammer`, `architecture-requirementer`, `architecture-scope-bounder`, `architecture-domain-modeler`, `architecture-service-designer`, `architecture-data-designer`, `architecture-load-estimator`, `architecture-integration-designer`, `architecture-deployment-designer`, `architecture-security-designer`, `architecture-observability-designer`, `architecture-decision-discoverer`, and `architecture-risk-evaluator` plugins.
 
 ## Install
 
@@ -24,6 +24,7 @@ Plugin names remain stable:
 - `architecture-security-designer`
 - `architecture-observability-designer`
 - `architecture-decision-discoverer`
+- `architecture-risk-evaluator`
 
 To enable plugins explicitly in `~/.codex/config.toml`:
 
@@ -63,6 +64,9 @@ enabled = true
 
 [plugins."architecture-decision-discoverer@komdosh-architect"]
 enabled = true
+
+[plugins."architecture-risk-evaluator@komdosh-architect"]
+enabled = true
 ```
 
 Restart Codex after adding or updating the marketplace so the plugin skills are loaded into the session context.
@@ -93,3 +97,4 @@ Architecture documents should be compact, self-contained, and easy to scan.
 - [plugins/architecture-security-designer](plugins/architecture-security-designer)
 - [plugins/architecture-observability-designer](plugins/architecture-observability-designer)
 - [plugins/architecture-decision-discoverer](plugins/architecture-decision-discoverer)
+- [plugins/architecture-risk-evaluator](plugins/architecture-risk-evaluator)

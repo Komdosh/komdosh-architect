@@ -1,0 +1,5 @@
+interface:
+  display_name: "Risk Register Builder"
+  short_description: "Build risk register."
+  brand_color: "#F59E0B"
+  default_prompt: "Use $architecture-risk-evaluator:risk-register-builder to create a compact architecture risk register."
