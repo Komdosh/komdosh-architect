@@ -1,5 +1,5 @@
 ---
-name: stateful-dependency-placement-planner
+name: stateful-placement-planner
 description: Place databases, caches, queues, brokers, object stores, search, file storage, and other stateful dependencies with ownership, HA, backup, restore, locality, retention, and operational responsibility.
 ---
 

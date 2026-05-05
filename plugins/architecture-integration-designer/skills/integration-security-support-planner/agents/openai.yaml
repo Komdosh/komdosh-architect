@@ -2,4 +2,4 @@ interface:
   display_name: "Integration Security Support Planner"
   short_description: "Plan security, observability, and support."
   brand_color: "#8B5CF6"
-  default_prompt: "Use $architecture-integration-designer:integration-security-support-planner to define integration security, observability, and support expectations."
+  default_prompt: "Use $architecture-integration-designer:security-support-planner to define integration security, observability, and support expectations."

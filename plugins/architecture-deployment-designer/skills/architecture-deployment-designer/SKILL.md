@@ -1,5 +1,5 @@
 ---
-name: architecture-deployment-designer
+name: deployment-designer
 description: Design deployment architecture from service, data, load, and integration context, covering runtime topology, environments, network boundaries, stateful dependencies, scaling, rollout, reliability, DR, configuration, secrets, operations, diagrams, assumptions, and handoff readiness.
 ---
 
@@ -57,11 +57,11 @@ Ask when region, data residency, availability, or compliance constraints would m
 2. Use `$architecture-deployment-designer:runtime-topology-designer` to define deployment units, process/runtime boundaries, and topology.
 3. Use `$architecture-deployment-designer:environment-strategy-planner` to define environment, region, AZ, tenant, data, and promotion strategy.
 4. Use `$architecture-deployment-designer:network-boundary-designer` to define ingress, egress, trust zones, gateways, DNS, and TLS.
-5. Use `$architecture-deployment-designer:stateful-dependency-placement-planner` to place databases, caches, queues, brokers, object stores, search, and files.
+5. Use `$architecture-deployment-designer:stateful-placement-planner` to place databases, caches, queues, brokers, object stores, search, and files.
 6. Use `$architecture-deployment-designer:scaling-capacity-planner` to define scaling units, autoscaling signals, quotas, headroom, and cost constraints.
 7. Use `$architecture-deployment-designer:rollout-release-planner` to define rollout, rollback, migration, compatibility, and release strategy.
 8. Use `$architecture-deployment-designer:reliability-dr-planner` to define availability, failover, backup, restore, RPO, RTO, and DR posture.
-9. Use `$architecture-deployment-designer:config-secrets-operations-planner` to define config, secrets, observability, alerting, runbooks, and support ownership.
+9. Use `$architecture-deployment-designer:config-secrets-ops-planner` to define config, secrets, observability, alerting, runbooks, and support ownership.
 10. Use `$architecture-deployment-designer:deployment-diagrammer` when deployment diagrams clarify decisions.
 11. Use `$architecture-deployment-designer:deployment-review-gate` before final delivery.
 

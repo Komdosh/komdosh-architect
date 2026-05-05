@@ -1,6 +1,6 @@
 {
   "name": "architecture-decision-discoverer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Architecture decision discovery assistant for finding ADRs and decision notes across local files, related repos, MCP/RAG, memory, and AI context sources, then extracting constraints, drift risks, and decision context without writing ADRs.",
   "author": {
     "name": "Architecture Tools"
@@ -30,7 +30,7 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use $architecture-decision-discoverer:architecture-decision-discoverer to discover existing ADRs and decision context before this architecture work.",
+      "Use $architecture-decision-discoverer:decision-discoverer to discover existing ADRs and decision context before this architecture work.",
       "Use $architecture-decision-discoverer:decision-source-finder to search local files, related repos, MCP/RAG, memory, and AI context sources for ADRs.",
       "Use $architecture-decision-discoverer:decision-drift-detector to check this design against existing architecture decisions."
     ],

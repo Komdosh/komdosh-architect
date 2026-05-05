@@ -21,7 +21,7 @@ Require:
 - reliability or rollout decisions when relevant
 - requested format when the user needs Mermaid, DrawIO, or another output
 
-If deployment inputs are missing, route back to `$architecture-deployment-designer:architecture-deployment-designer`.
+If deployment inputs are missing, route back to `$architecture-deployment-designer:deployment-designer`.
 
 ## Diagram Types
 

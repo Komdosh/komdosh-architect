@@ -34,7 +34,7 @@ Outputs should be compact, self-contained, and easy to scan.
 
 ## Skill Grouping
 
-- `$architecture-decision-discoverer:architecture-decision-discoverer`: orchestrates the full decision-discovery pass.
+- `$architecture-decision-discoverer:decision-discoverer`: orchestrates the full decision-discovery pass.
 - `$architecture-decision-discoverer:decision-source-finder`: searches local files, related repos, MCP/RAG, memory, and AI context sources for ADRs and decision notes.
 - `$architecture-decision-discoverer:adr-reader-summarizer`: reads ADRs and extracts status, context, decision, alternatives, consequences, notes, and links.
 - `$architecture-decision-discoverer:decision-constraint-extractor`: turns ADR content into constraints, defaults, forbidden choices, assumptions, and revisit triggers.
@@ -46,7 +46,7 @@ Outputs should be compact, self-contained, and easy to scan.
 - `$architecture-decision-discoverer:decision-discovery-review-gate`: reviews discovery coverage, readability, and scope discipline.
 
 Use the namespaced skill form above in Codex prompts.
-The short skill names are directory names, not the guaranteed runtime invocation names.
+Directory names are source layout only; runtime skill names come from `SKILL.md` frontmatter.
 
 ## Quality Bar
 

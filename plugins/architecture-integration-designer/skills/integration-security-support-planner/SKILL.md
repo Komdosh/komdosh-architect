@@ -1,5 +1,5 @@
 ---
-name: integration-security-support-planner
+name: security-support-planner
 description: Define integration authentication, authorization, trust boundaries, data exposure, audit, rate limits, observability, diagnostics, support ownership, and operational runbook expectations.
 ---
 

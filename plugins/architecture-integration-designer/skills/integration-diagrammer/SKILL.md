@@ -20,7 +20,7 @@ Require:
 - assumptions that must stay visible
 - requested format when the user needs Mermaid, DrawIO, or another output
 
-If integration inputs are missing, route back to `$architecture-integration-designer:architecture-integration-designer`.
+If integration inputs are missing, route back to `$architecture-integration-designer:integration-designer`.
 
 ## Diagram Types
 

@@ -1,5 +1,5 @@
 ---
-name: audit-compliance-observability-planner
+name: audit-compliance-planner
 description: Define security audit events, compliance evidence, security logs, metrics, traces, alerts, anomaly signals, incident support, investigation data, retention, and evidence ownership.
 ---
 

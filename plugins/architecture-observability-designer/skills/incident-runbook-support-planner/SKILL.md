@@ -1,5 +1,5 @@
 ---
-name: incident-runbook-support-planner
+name: incident-support-planner
 description: Define incident investigation workflows, runbook inputs, triage signals, ownership, escalation, customer support handoff, post-incident review signals, and recovery validation needs.
 ---
 

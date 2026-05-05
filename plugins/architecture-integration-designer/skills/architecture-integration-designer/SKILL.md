@@ -1,5 +1,5 @@
 ---
-name: architecture-integration-designer
+name: integration-designer
 description: Design API-first and integration architecture from service, data, load, and external-system context, covering surfaces, contracts, interaction styles, events, webhooks, batch, resilience, idempotency, versioning, security, observability, support, diagrams, assumptions, and handoff readiness.
 ---
 
@@ -59,7 +59,7 @@ Ask when unknown consumers or compatibility expectations would make API design m
 5. Use `$architecture-integration-designer:batch-file-integration-planner` to frame batch, import/export, reconciliation, and schedule-driven integrations.
 6. Use `$architecture-integration-designer:resilience-idempotency-planner` to define retries, idempotency, timeouts, compensation, rate limits, and backpressure.
 7. Use `$architecture-integration-designer:versioning-evolution-planner` to define compatibility, versioning, deprecation, and migration policy.
-8. Use `$architecture-integration-designer:integration-security-support-planner` to define security, trust, audit, observability, and support ownership.
+8. Use `$architecture-integration-designer:security-support-planner` to define security, trust, audit, observability, and support ownership.
 9. Use `$architecture-integration-designer:integration-diagrammer` when integration diagrams clarify decisions.
 10. Use `$architecture-integration-designer:integration-review-gate` before final delivery.
 

@@ -1,5 +1,5 @@
 ---
-name: architecture-decision-discoverer
+name: decision-discoverer
 description: Discover existing ADRs and architecture decisions from local files, related repos, MCP/RAG tools, raw memory, and AI context sources, then extract constraints, assumptions, consequences, drift risks, and compact decision context without writing ADRs.
 ---
 

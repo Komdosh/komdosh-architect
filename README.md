@@ -111,11 +111,11 @@ Use $architecture-requirementer:architecture-requirementer to prepare architect-
 ```
 
 ```text
-Use $architecture-decision-discoverer:architecture-decision-discoverer to find ADRs and decision notes that constrain this design.
+Use $architecture-decision-discoverer:decision-discoverer to find ADRs and decision notes that constrain this design.
 ```
 
 ```text
-Use $architecture-integration-designer:architecture-integration-designer to design API and integration contracts for this architecture.
+Use $architecture-integration-designer:integration-designer to design API and integration contracts for this architecture.
 ```
 
 ```text

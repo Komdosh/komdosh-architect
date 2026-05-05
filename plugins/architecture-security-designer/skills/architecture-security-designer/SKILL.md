@@ -59,7 +59,7 @@ Ask when compliance, privacy, tenant isolation, privileged access, or sensitive 
 6. Use `$architecture-security-designer:threat-abuse-case-modeler` to identify architecture-level abuse cases, misuse paths, and mitigations.
 7. Use `$architecture-security-designer:api-integration-security-planner` to define controls for APIs, events, webhooks, batch, files, and external systems.
 8. Use `$architecture-security-designer:secrets-keys-lifecycle-planner` to define secrets, keys, certificates, credentials, rotation, and break-glass rules.
-9. Use `$architecture-security-designer:audit-compliance-observability-planner` to define audit events, security logs, compliance evidence, monitoring, and incident support.
+9. Use `$architecture-security-designer:audit-compliance-planner` to define audit events, security logs, compliance evidence, monitoring, and incident support.
 10. Use `$architecture-security-designer:security-diagrammer` when diagrams clarify security boundaries or flows.
 11. Use `$architecture-security-designer:security-review-gate` before final delivery.
 

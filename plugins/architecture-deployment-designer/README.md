@@ -36,21 +36,21 @@ Outputs should be compact, self-contained, and easy to scan.
 
 ## Skill Grouping
 
-- `$architecture-deployment-designer:architecture-deployment-designer`: orchestrates the full deployment-design pass.
+- `$architecture-deployment-designer:deployment-designer`: orchestrates the full deployment-design pass.
 - `$architecture-deployment-designer:deployment-context-inventory`: identifies runtime constraints, environments, dependencies, and operational assumptions.
 - `$architecture-deployment-designer:runtime-topology-designer`: defines deployment units, process/runtime boundaries, and topology.
 - `$architecture-deployment-designer:environment-strategy-planner`: defines environment, region, AZ, tenant, data, and promotion strategy.
 - `$architecture-deployment-designer:network-boundary-designer`: defines ingress, egress, trust zones, network boundaries, DNS, TLS, and gateway placement.
-- `$architecture-deployment-designer:stateful-dependency-placement-planner`: places databases, caches, queues, brokers, object stores, search, and files.
+- `$architecture-deployment-designer:stateful-placement-planner`: places databases, caches, queues, brokers, object stores, search, and files.
 - `$architecture-deployment-designer:scaling-capacity-planner`: defines scaling units, autoscaling signals, quotas, headroom, and cost constraints.
 - `$architecture-deployment-designer:rollout-release-planner`: defines rollout, rollback, compatibility, migration, and release strategy.
 - `$architecture-deployment-designer:reliability-dr-planner`: defines availability, failover, backup, restore, RPO, RTO, and DR posture.
-- `$architecture-deployment-designer:config-secrets-operations-planner`: defines config, secrets, observability, alerting, runbooks, and support ownership.
+- `$architecture-deployment-designer:config-secrets-ops-planner`: defines config, secrets, observability, alerting, runbooks, and support ownership.
 - `$architecture-deployment-designer:deployment-diagrammer`: creates deployment topology, environment, network, reliability, or rollout diagrams.
 - `$architecture-deployment-designer:deployment-review-gate`: reviews deployment design for runtime readiness and stage discipline.
 
 Use the namespaced skill form above in Codex prompts.
-The short skill names are directory names, not the guaranteed runtime invocation names.
+Directory names are source layout only; runtime skill names come from `SKILL.md` frontmatter.
 
 ## Quality Bar
 

@@ -1,6 +1,6 @@
 {
   "name": "architecture-deployment-designer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Deployment architecture assistant for designing runtime topology, environments, network boundaries, scaling, rollout, reliability, DR, configuration, secrets, operations, and deployment diagrams.",
   "author": {
     "name": "Architecture Tools"
@@ -31,7 +31,7 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use $architecture-deployment-designer:architecture-deployment-designer to design deployment architecture for this system.",
+      "Use $architecture-deployment-designer:deployment-designer to design deployment architecture for this system.",
       "Use $architecture-deployment-designer:runtime-topology-designer to define deployment units and runtime topology.",
       "Use $architecture-deployment-designer:reliability-dr-planner to plan availability, failover, backup, and disaster recovery."
     ],

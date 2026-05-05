@@ -1,5 +1,5 @@
 ---
-name: config-secrets-operations-planner
+name: config-secrets-ops-planner
 description: Define runtime configuration, secrets ownership, rotation, observability, logging, metrics, tracing, alerts, dashboards, runbooks, support ownership, and operational readiness.
 ---
 

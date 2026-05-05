@@ -1,5 +1,5 @@
 ---
-name: error-taxonomy-diagnostics-designer
+name: error-diagnostics-designer
 description: Define architecture-level error taxonomy, failure categories, user impact, retryability, ownership, diagnostic fields, external dependency errors, support codes, and incident classification.
 ---
 

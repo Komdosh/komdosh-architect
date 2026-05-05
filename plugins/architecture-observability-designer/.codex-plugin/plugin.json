@@ -1,6 +1,6 @@
 {
   "name": "architecture-observability-designer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Observability architecture assistant for designing SLIs, SLOs, logs, metrics, traces, correlation, dashboards, alerts, diagnostics, incident support, telemetry ownership, retention, and observability diagrams.",
   "author": {
     "name": "Architecture Tools"
@@ -31,7 +31,7 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use $architecture-observability-designer:architecture-observability-designer to design observability architecture for this system.",
+      "Use $architecture-observability-designer:observability-designer to design observability architecture for this system.",
       "Use $architecture-observability-designer:sli-slo-health-designer to define user-visible health, SLIs, and SLOs.",
       "Use $architecture-observability-designer:observability-review-gate to review this observability design for architecture readiness."
     ],

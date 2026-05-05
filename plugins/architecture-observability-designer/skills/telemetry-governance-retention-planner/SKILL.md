@@ -1,5 +1,5 @@
 ---
-name: telemetry-governance-retention-planner
+name: telemetry-retention-planner
 description: Define telemetry ownership, access, retention, privacy, sensitive-data handling, compliance, cost guardrails, cardinality limits, quality review, and lifecycle expectations.
 ---
 

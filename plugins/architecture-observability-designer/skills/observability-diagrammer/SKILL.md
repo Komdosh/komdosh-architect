@@ -18,7 +18,7 @@ Require:
 - SLI/SLO, telemetry, logging, tracing, dashboard, alert, or incident decisions
 - requested format when the user needs Mermaid, DrawIO, or another output
 
-If observability inputs are missing, route back to `$architecture-observability-designer:architecture-observability-designer`.
+If observability inputs are missing, route back to `$architecture-observability-designer:observability-designer`.
 
 ## Diagram Types
 

@@ -1,5 +1,5 @@
 ---
-name: observability-context-inventory
+name: context-inventory
 description: Identify user journeys, components, dependencies, integrations, jobs, failure modes, owners, support needs, compliance constraints, and existing observability assumptions.
 ---
 

@@ -2,4 +2,4 @@ interface:
   display_name: "Architecture Deployment Designer"
   short_description: "Design runtime deployment architecture."
   brand_color: "#2563EB"
-  default_prompt: "Use $architecture-deployment-designer:architecture-deployment-designer to design deployment architecture for this system."
+  default_prompt: "Use $architecture-deployment-designer:deployment-designer to design deployment architecture for this system."

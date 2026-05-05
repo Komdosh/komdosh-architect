@@ -2,4 +2,4 @@ interface:
   display_name: "Observability Context Inventory"
   short_description: "Inventory observability context."
   brand_color: "#0891B2"
-  default_prompt: "Use $architecture-observability-designer:observability-context-inventory to identify journeys, components, dependencies, failure modes, and support needs."
+  default_prompt: "Use $architecture-observability-designer:context-inventory to identify journeys, components, dependencies, failure modes, and support needs."

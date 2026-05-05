@@ -46,12 +46,12 @@ Outputs should be compact, self-contained, and easy to scan.
 - `$architecture-security-designer:threat-abuse-case-modeler`: identifies architecture-level abuse cases, misuse paths, and required mitigations.
 - `$architecture-security-designer:api-integration-security-planner`: defines security controls for APIs, events, webhooks, batch, files, and external systems.
 - `$architecture-security-designer:secrets-keys-lifecycle-planner`: defines secrets, keys, certificates, credentials, rotation, storage, and break-glass rules.
-- `$architecture-security-designer:audit-compliance-observability-planner`: defines audit events, security logs, monitoring, compliance evidence, and incident support.
+- `$architecture-security-designer:audit-compliance-planner`: defines audit events, security logs, monitoring, compliance evidence, and incident support.
 - `$architecture-security-designer:security-diagrammer`: creates security context, trust-boundary, access, data-exposure, and abuse-flow diagrams.
 - `$architecture-security-designer:security-review-gate`: reviews security design for readiness and stage discipline.
 
 Use the namespaced skill form above in Codex prompts.
-The short skill names are directory names, not the guaranteed runtime invocation names.
+Directory names are source layout only; runtime skill names come from `SKILL.md` frontmatter.
 
 ## Quality Bar
 

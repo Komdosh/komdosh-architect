@@ -1,5 +1,5 @@
 ---
-name: architecture-observability-designer
+name: observability-designer
 description: Design observability architecture from service, data, load, integration, deployment, and security context, covering user-visible health, SLIs, SLOs, logs, metrics, traces, correlation, dashboards, alerts, error taxonomy, diagnostics, incidents, support, telemetry ownership, retention, diagrams, assumptions, and handoff readiness.
 ---
 
@@ -50,15 +50,15 @@ Ask when user-visible health, operational ownership, compliance, privacy, or inc
 
 ## Skill Flow
 
-1. Use `$architecture-observability-designer:observability-context-inventory` to identify journeys, components, dependencies, failure modes, and support needs.
+1. Use `$architecture-observability-designer:context-inventory` to identify journeys, components, dependencies, failure modes, and support needs.
 2. Use `$architecture-observability-designer:sli-slo-health-designer` to define user-visible health, SLIs, SLOs, error budgets, and availability signals.
 3. Use `$architecture-observability-designer:telemetry-signal-planner` to define metrics, events, business signals, security signals, and ownership.
 4. Use `$architecture-observability-designer:logging-diagnostics-planner` to define logs, diagnostic context, sensitive-data rules, and support usefulness.
 5. Use `$architecture-observability-designer:tracing-correlation-planner` to define tracing, correlation IDs, causality, async flows, and cross-boundary visibility.
-6. Use `$architecture-observability-designer:error-taxonomy-diagnostics-designer` to define error categories, failure classification, user impact, and diagnostic expectations.
+6. Use `$architecture-observability-designer:error-diagnostics-designer` to define error categories, failure classification, user impact, and diagnostic expectations.
 7. Use `$architecture-observability-designer:dashboard-alert-planner` to define dashboards, alerts, severity, escalation, and noise control.
-8. Use `$architecture-observability-designer:incident-runbook-support-planner` to define incident workflows, runbook inputs, investigation data, and support handoff.
-9. Use `$architecture-observability-designer:telemetry-governance-retention-planner` to define ownership, retention, privacy, access, cost, and compliance.
+8. Use `$architecture-observability-designer:incident-support-planner` to define incident workflows, runbook inputs, investigation data, and support handoff.
+9. Use `$architecture-observability-designer:telemetry-retention-planner` to define ownership, retention, privacy, access, cost, and compliance.
 10. Use `$architecture-observability-designer:observability-diagrammer` when diagrams clarify signal flow or diagnosis.
 11. Use `$architecture-observability-designer:observability-review-gate` before final delivery.
 

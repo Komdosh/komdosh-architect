@@ -1,6 +1,6 @@
 {
   "name": "architecture-integration-designer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Integration architecture assistant for designing API-first, event, webhook, batch, and external-system interfaces with extensibility, versioning, resilience, security, and support in mind.",
   "author": {
     "name": "Architecture Tools"
@@ -30,7 +30,7 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use $architecture-integration-designer:architecture-integration-designer to design API and integration contracts for this architecture.",
+      "Use $architecture-integration-designer:integration-designer to design API and integration contracts for this architecture.",
       "Use $architecture-integration-designer:api-contract-strategist to define extensible API contract strategy and lifecycle.",
       "Use $architecture-integration-designer:versioning-evolution-planner to plan compatibility, versioning, and deprecation."
     ],

@@ -2,4 +2,4 @@ interface:
   display_name: "Architecture Integration Designer"
   short_description: "Design API and integration contracts."
   brand_color: "#8B5CF6"
-  default_prompt: "Use $architecture-integration-designer:architecture-integration-designer to design API and integration contracts for this architecture."
+  default_prompt: "Use $architecture-integration-designer:integration-designer to design API and integration contracts for this architecture."

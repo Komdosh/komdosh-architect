@@ -35,7 +35,7 @@ Outputs should be compact, self-contained, and easy to scan.
 
 ## Skill Grouping
 
-- `$architecture-integration-designer:architecture-integration-designer`: orchestrates the full integration-design pass.
+- `$architecture-integration-designer:integration-designer`: orchestrates the full integration-design pass.
 - `$architecture-integration-designer:integration-surface-inventory`: identifies integration surfaces, consumers, producers, ownership, and lifecycle.
 - `$architecture-integration-designer:api-contract-strategist`: designs API contract strategy, extensibility, consumer fit, and lifecycle constraints.
 - `$architecture-integration-designer:interaction-style-decider`: chooses sync, async, event, webhook, batch, file, or manual integration style.
@@ -43,12 +43,12 @@ Outputs should be compact, self-contained, and easy to scan.
 - `$architecture-integration-designer:batch-file-integration-planner`: frames batch, import/export, file, reconciliation, and schedule-driven integrations.
 - `$architecture-integration-designer:resilience-idempotency-planner`: defines retries, idempotency, timeouts, compensation, rate limits, and backpressure.
 - `$architecture-integration-designer:versioning-evolution-planner`: defines compatibility, versioning, deprecation, migration, and consumer-support policy.
-- `$architecture-integration-designer:integration-security-support-planner`: defines authn/authz, trust, audit, observability, support, and operational ownership.
+- `$architecture-integration-designer:security-support-planner`: defines authn/authz, trust, audit, observability, support, and operational ownership.
 - `$architecture-integration-designer:integration-diagrammer`: creates integration context, sequence, and collaboration diagrams.
 - `$architecture-integration-designer:integration-review-gate`: reviews integration design for API quality and lifecycle readiness.
 
 Use the namespaced skill form above in Codex prompts.
-The short skill names are directory names, not the guaranteed runtime invocation names.
+Directory names are source layout only; runtime skill names come from `SKILL.md` frontmatter.
 
 ## Quality Bar
 

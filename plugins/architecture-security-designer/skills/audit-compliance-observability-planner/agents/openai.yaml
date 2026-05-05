@@ -2,4 +2,4 @@ interface:
   display_name: "Audit Compliance Observability Planner"
   short_description: "Plan security evidence."
   brand_color: "#DC2626"
-  default_prompt: "Use $architecture-security-designer:audit-compliance-observability-planner to define audit events, compliance evidence, security logs, alerts, and incident support."
+  default_prompt: "Use $architecture-security-designer:audit-compliance-planner to define audit events, compliance evidence, security logs, alerts, and incident support."
