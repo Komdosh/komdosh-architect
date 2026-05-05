@@ -1,0 +1,5 @@
+interface:
+  display_name: "Jira Description Builder"
+  short_description: "Write self-contained Jira issue descriptions."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-jira-tasker:jira-description-builder to write the Jira issue description for this AI-agent task."

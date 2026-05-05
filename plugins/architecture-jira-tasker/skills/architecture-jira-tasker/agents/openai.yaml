@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Jira Tasker"
+  short_description: "Create Jira implementation tasks from completed architecture docs."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-jira-tasker:architecture-jira-tasker to create a rich Jira task from completed architecture docs."

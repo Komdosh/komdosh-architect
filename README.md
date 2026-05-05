@@ -19,7 +19,7 @@ The goal is simple: make architecture work easier to read, easier to review, and
 ## What You Get
 
 - a staged architecture workflow from product goals to implementation readiness
-- focused plugins for requirements, scope, domain, service, data, load, integration, deployment, security, observability, decisions, risks, and diagrams
+- focused plugins for requirements, scope, domain, service, data, load, integration, deployment, security, observability, decisions, risks, Jira handoff, and diagrams
 - compact, self-contained outputs written for humans first
 - review gates that catch missing context, unclear decisions, drift, and premature implementation detail
 - reusable Codex skill names that can be called directly in prompts
@@ -43,6 +43,7 @@ For existing systems, start with `architecture-decision-discoverer` so current A
 | 9 | [`architecture-security-designer`](plugins/architecture-security-designer) | Design trust boundaries, identity, authorization, data protection, abuse controls, secrets, and audit. |
 | 10 | [`architecture-observability-designer`](plugins/architecture-observability-designer) | Design SLIs, SLOs, logs, metrics, traces, dashboards, alerts, diagnostics, and incident support. |
 | 11 | [`architecture-risk-evaluator`](plugins/architecture-risk-evaluator) | Prioritize architecture risks, validation work, mitigations, owners, and go/no-go readiness. |
+| 12 | [`architecture-jira-tasker`](plugins/architecture-jira-tasker) | Create rich, self-contained Jira implementation tasks from completed architecture docs. |
 | Any | [`architecture-diagrammer`](plugins/architecture-diagrammer) | Create source-backed architecture diagrams from any stage output. |
 
 ## Install
@@ -98,6 +99,9 @@ enabled = true
 
 [plugins."architecture-risk-evaluator@komdosh-architect"]
 enabled = true
+
+[plugins."architecture-jira-tasker@komdosh-architect"]
+enabled = true
 ```
 
 ## Prompt Examples
@@ -116,6 +120,10 @@ Use $architecture-integration-designer:architecture-integration-designer to desi
 
 ```text
 Use $architecture-risk-evaluator:architecture-risk-evaluator to evaluate implementation readiness and produce a compact risk register.
+```
+
+```text
+Use $architecture-jira-tasker:architecture-jira-tasker to create a rich Jira task from completed architecture docs.
 ```
 
 ## Output Standard
@@ -147,6 +155,7 @@ Architecture documents should be compact, self-contained, and easy to scan.
 | [`architecture-observability-designer`](plugins/architecture-observability-designer) | SLIs, SLOs, logs, metrics, traces, alerts, dashboards, diagnostics, incidents, and telemetry governance. |
 | [`architecture-decision-discoverer`](plugins/architecture-decision-discoverer) | ADR and decision-note discovery, constraint extraction, drift detection, and decision-context briefs. |
 | [`architecture-risk-evaluator`](plugins/architecture-risk-evaluator) | Architecture risks, assumptions, prioritization, validation spikes, mitigations, owners, and go/no-go readiness. |
+| [`architecture-jira-tasker`](plugins/architecture-jira-tasker) | Jira-ready AI-agent implementation tasks from completed architecture docs. |
 
 ## Repository Layout
 
@@ -166,7 +175,8 @@ Architecture documents should be compact, self-contained, and easy to scan.
 │   ├── architecture-security-designer/
 │   ├── architecture-observability-designer/
 │   ├── architecture-decision-discoverer/
-│   └── architecture-risk-evaluator/
+│   ├── architecture-risk-evaluator/
+│   └── architecture-jira-tasker/
 └── README.md
 ```
 

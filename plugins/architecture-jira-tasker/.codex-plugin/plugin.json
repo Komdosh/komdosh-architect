@@ -1,0 +1,37 @@
+{
+  "name": "architecture-jira-tasker",
+  "version": "0.1.0",
+  "description": "Architecture-to-Jira assistant for turning completed architecture docs into rich, self-contained one-week implementation tasks for fast AI agents, with human work limited to review.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "jira",
+    "task-creation",
+    "implementation-planning",
+    "ai-agent",
+    "delivery-handoff",
+    "project-management",
+    "engineering-planning"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Jira Tasker",
+    "shortDescription": "Creates Jira-ready implementation tasks from architecture docs.",
+    "longDescription": "Architecture Jira Tasker converts completed architecture documentation into large, self-contained Jira implementation tasks sized for fast AI-agent delivery. It plans a coherent one-week implementation scope, fills rich Jira metadata, writes a complete issue description with acceptance criteria and validation steps, and creates the task on the Jira board when a Jira connector is available. Human effort is scoped to review, approval, and merge decisions.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $architecture-jira-tasker:architecture-jira-tasker to create a Jira task from these completed architecture docs.",
+      "Use $architecture-jira-tasker:task-scope-planner to shape this architecture handoff into one large AI-agent implementation task.",
+      "Use $architecture-jira-tasker:task-review-gate to check whether this Jira task is self-contained before creation."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Task Scope Planner"
+  short_description: "Shape one-week AI-agent implementation scope."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-jira-tasker:task-scope-planner to shape this architecture handoff into one large AI-agent task."

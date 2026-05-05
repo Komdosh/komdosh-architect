@@ -159,6 +159,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Developer Tools"
+    },
+    {
+      "name": "architecture-jira-tasker",
+      "source": {
+        "source": "local",
+        "path": "./plugins/architecture-jira-tasker"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
     }
   ]
 }

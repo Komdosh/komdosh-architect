@@ -1,0 +1,5 @@
+interface:
+  display_name: "Jira Task Publisher"
+  short_description: "Create reviewed Jira tasks or return creation-ready payloads."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-jira-tasker:jira-task-publisher to create this reviewed task in Jira."

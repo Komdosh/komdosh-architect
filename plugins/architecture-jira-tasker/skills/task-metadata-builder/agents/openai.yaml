@@ -1,0 +1,5 @@
+interface:
+  display_name: "Task Metadata Builder"
+  short_description: "Fill Jira metadata for architecture-derived tasks."
+  brand_color: "#2563EB"
+  default_prompt: "Use $architecture-jira-tasker:task-metadata-builder to fill Jira metadata for this architecture-derived implementation task."
