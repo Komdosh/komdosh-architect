@@ -24,6 +24,19 @@ The goal is simple: make architecture work easier to read, easier to review, and
 - review gates that catch missing context, unclear decisions, drift, and premature implementation detail
 - reusable Codex skill names that can be called directly in prompts
 
+## How To Choose
+
+Start from the work you need to finish, not from the full plugin list.
+
+| Need | Start with | Then add |
+|------|------------|----------|
+| New product or large feature | [`architecture-requirementer`](plugins/architecture-requirementer) | scope, domain, service, data, integration |
+| Existing system with unknown constraints | [`architecture-decision-discoverer`](plugins/architecture-decision-discoverer) | risk, scope, service, diagram |
+| Unclear ownership or boundaries | [`architecture-scope-bounder`](plugins/architecture-scope-bounder) | domain, service, data |
+| API, events, webhooks, or external systems | [`architecture-integration-designer`](plugins/architecture-integration-designer) | security, observability, deployment |
+| Runtime placement or production readiness | [`architecture-deployment-designer`](plugins/architecture-deployment-designer) | load, observability, security, risk |
+| Final implementation handoff | [`architecture-risk-evaluator`](plugins/architecture-risk-evaluator) | Jira tasker, diagrammer |
+
 ## Recommended Flow
 
 Use the workflow in order when starting from a new product or large feature.
@@ -45,6 +58,17 @@ For existing systems, start with `architecture-decision-discoverer` so current A
 | 11 | [`architecture-risk-evaluator`](plugins/architecture-risk-evaluator) | Prioritize architecture risks, validation work, mitigations, owners, and go/no-go readiness. |
 | 12 | [`architecture-jira-tasker`](plugins/architecture-jira-tasker) | Create rich, self-contained Jira implementation tasks from completed architecture docs. |
 | Any | [`architecture-diagrammer`](plugins/architecture-diagrammer) | Create source-backed architecture diagrams from any stage output. |
+
+## Recommended Sets
+
+For everyday use, enable only the plugins that match the team workflow.
+
+| Set | Plugins | Best for |
+|-----|---------|----------|
+| Discovery | decision discoverer, requirementer, scope bounder, diagrammer | Early product or architecture discovery. |
+| Design core | domain modeler, service designer, data designer, integration designer | Turning scope into system structure and contracts. |
+| Production readiness | load estimator, deployment designer, security designer, observability designer, risk evaluator | Preparing architecture for real operation. |
+| Delivery handoff | risk evaluator, Jira tasker, diagrammer | Converting approved architecture into implementation work. |
 
 ## Install
 
@@ -157,6 +181,21 @@ Architecture documents should be compact, self-contained, and easy to scan.
 | [`architecture-risk-evaluator`](plugins/architecture-risk-evaluator) | Architecture risks, assumptions, prioritization, validation spikes, mitigations, owners, and go/no-go readiness. |
 | [`architecture-jira-tasker`](plugins/architecture-jira-tasker) | Jira-ready AI-agent implementation tasks from completed architecture docs. |
 
+## Suggested Plugins To Add Next
+
+These are good marketplace candidates, but they should be added only when their scope is crisp enough to stay independent.
+
+| Candidate | Why it belongs | Boundary |
+|-----------|----------------|----------|
+| `architecture-adr-writer` | The marketplace can discover and evaluate decisions, but it intentionally does not write or supersede ADRs. | Writes ADRs only after decision context is found and reviewed. |
+| `architecture-api-contract-designer` | Integration design stops before final schemas; teams often need OpenAPI, event, webhook, and compatibility contract detail next. | Detailed contracts only, not service implementation. |
+| `architecture-implementation-planner` | Jira tasker creates delivery tickets, but a repo-local implementation plan is useful before ticket creation. | Produces implementation sequence, file/module ownership, validation plan, and rollout notes. |
+| `architecture-migration-planner` | Existing systems need coexistence, data backfill, contract migration, rollback, and cutover planning across several current plugins. | Migration strategy only, not migration scripts. |
+| `architecture-cost-estimator` | Load and deployment plugins expose capacity pressure, but cost tradeoffs deserve a dedicated decision brief. | Estimates cost ranges and levers, not cloud billing automation. |
+| `architecture-reviewer` | Each plugin has a local review gate; a final cross-stage reviewer would catch contradictions across the full design set. | Reviews completed architecture docs, does not rewrite them by default. |
+
+The highest-value next additions are `architecture-adr-writer`, `architecture-api-contract-designer`, and `architecture-implementation-planner` because they cover clear gaps after the current discovery, integration, and Jira handoff stages.
+
 ## Repository Layout
 
 ```text
@@ -177,10 +216,28 @@ Architecture documents should be compact, self-contained, and easy to scan.
 │   ├── architecture-decision-discoverer/
 │   ├── architecture-risk-evaluator/
 │   └── architecture-jira-tasker/
+├── scripts/
+│   └── validate_marketplace.py
 └── README.md
 ```
 
 Each plugin keeps its manifest in `.codex-plugin/plugin.json` and its Codex skills under `skills/`.
+
+## Maintaining The Marketplace
+
+Update the marketplace as one change set so the install metadata, plugin docs, and landing page do not drift.
+
+1. Add or update the plugin under `plugins/<plugin-name>/`.
+2. Update `.agents/plugins/marketplace.json`.
+3. Update the root `README.md` catalog, workflow guidance, enable snippet, and repository layout.
+4. Check that namespaced prompt examples use runtime skill names from `SKILL.md` frontmatter.
+5. Run validation before committing:
+
+```bash
+python3 scripts/validate_marketplace.py
+python3 -m json.tool .agents/plugins/marketplace.json >/dev/null
+git diff --check
+```
 
 ## Naming
 
