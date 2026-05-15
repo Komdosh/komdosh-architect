@@ -1,6 +1,6 @@
 {
   "name": "architecture-diagrammer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Diagram-only architecture assistant for turning source-backed architecture text into clear, standalone diagrams.",
   "author": {
     "name": "Architecture Tools"

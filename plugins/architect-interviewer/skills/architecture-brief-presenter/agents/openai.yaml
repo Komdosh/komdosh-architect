@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Brief Presenter"
+  short_description: "Prepare a stakeholder-facing architecture presentation."
+  brand_color: "#0F766E"
+  default_prompt: "Use $architect-interviewer:architecture-brief-presenter to prepare a concise architecture presentation before stakeholder review."

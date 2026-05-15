@@ -1,6 +1,6 @@
 {
   "name": "architecture-domain-modeler",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Domain-shaping architecture assistant for modeling business concepts, relationships, lifecycles, invariants, capabilities, commands, events, and domain diagrams before service design.",
   "author": {
     "name": "Architecture Tools"

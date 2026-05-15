@@ -1,0 +1,5 @@
+interface:
+  display_name: "Requirement Coverage Interviewer"
+  short_description: "Check requirements coverage and ask gap-focused questions."
+  brand_color: "#0F766E"
+  default_prompt: "Use $architect-interviewer:requirement-coverage-interviewer to check whether this architecture covers every known requirement."

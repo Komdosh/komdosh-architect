@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architect Interviewer"
+  short_description: "Present architecture and interview stakeholders for acceptance."
+  brand_color: "#0F766E"
+  default_prompt: "Use $architect-interviewer:architect-interviewer to present this service architecture and interview me for acceptance."

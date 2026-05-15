@@ -1,6 +1,6 @@
 {
   "name": "architecture-jira-tasker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Architecture-to-Jira assistant for turning completed architecture docs into rich, self-contained one-week implementation tasks for fast AI agents, with human work limited to review.",
   "author": {
     "name": "Architecture Tools"

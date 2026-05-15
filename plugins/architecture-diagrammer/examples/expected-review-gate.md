@@ -17,4 +17,4 @@ Format validity: pass
 - Edges: command, write, publish, and consume relationships are directional and labeled.
 - Medium: Mermaid, DrawIO, and Excalidraw artifacts each carry the same source-backed meaning.
 - Alignment: left-to-right flow follows caller, gateway, service, event, projection; DrawIO and Excalidraw use wider block gaps so connector labels have clear whitespace; store write is attached to the owning service.
-- Format validity: Mermaid syntax is simple, DrawIO XML parses with source/target edge cells, and Excalidraw JSON parses with bound arrows and readable label text.
+- Format validity: Mermaid syntax is simple, DrawIO XML parses with source/target edge cells, and Excalidraw JSON parses with bound arrows and bound rectangle labels.

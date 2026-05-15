@@ -1,6 +1,6 @@
 {
   "name": "architecture-service-designer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Service-structure architecture assistant for turning bounded domain models into component and service candidates, responsibilities, collaborations, dependency rules, and service diagrams.",
   "author": {
     "name": "Architecture Tools"

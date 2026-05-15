@@ -77,6 +77,10 @@ If a diagram may not render, simplify it before returning it.
 - Use hatching or roughness only to separate groups or assumptions.
 - Keep text readable and avoid hand-written density.
 - Leave visible whitespace around arrow labels; increase block spacing before accepting label overlap.
+- For raw `.excalidraw` files, represent text inside a block as bound text: a `type: "text"` element whose `containerId` points at the `type: "rectangle"` element, with a matching `{ "type": "text", "id": "<text-id>" }` entry in the rectangle `boundElements`.
+- Do not emit loose sibling block labels with `containerId: null`; those are separate floating text blocks, not text inside the rectangle.
+- Use skeleton-only `label.text` only when producing input for `convertToExcalidrawElements`, not when writing saved `.excalidraw` JSON.
+- Use standalone `type: "text"` elements only for free-floating notes or annotations that are not labels for a shape or connector.
 - If asked for a file, produce valid `.excalidraw` JSON.
 - For file output, the JSON must parse and include an `elements` array.
 - Bind arrows to source and target elements when supported by the format.

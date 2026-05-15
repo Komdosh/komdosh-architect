@@ -49,7 +49,7 @@ Then run format-specific checks:
 |--------|-----------------|
 | Mermaid | Fenced `mermaid` block, simple ASCII IDs, quoted complex labels, shallow subgraphs, and syntax likely to render in Markdown preview. |
 | DrawIO | XML parses, root is `mxfile` or `mxGraphModel`, cells have stable IDs, edge cells reference intended source and target blocks or group anchors, and labels remain readable. |
-| Excalidraw | JSON parses, `elements` is present, text elements are readable, arrows bind to intended elements when supported, and no malformed element breaks opening the file. |
+| Excalidraw | JSON parses, `elements` is present, block labels use bound text with `containerId` pointing at the rectangle and reciprocal rectangle `boundElements`, loose sibling text elements are absent unless they are intentional notes, arrows bind to intended elements when supported, and no malformed element breaks opening the file. |
 
 Open or render the artifact when the local toolchain supports it without leaving the repository. If local validation can only parse the file, report the remaining manual open/render check.
 

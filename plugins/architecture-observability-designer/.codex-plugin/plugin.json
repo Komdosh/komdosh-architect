@@ -1,6 +1,6 @@
 {
   "name": "architecture-observability-designer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Observability architecture assistant for designing SLIs, SLOs, logs, metrics, traces, correlation, dashboards, alerts, diagnostics, incident support, telemetry ownership, retention, and observability diagrams.",
   "author": {
     "name": "Architecture Tools"

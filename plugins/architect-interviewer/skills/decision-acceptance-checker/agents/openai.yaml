@@ -1,0 +1,5 @@
+interface:
+  display_name: "Decision Acceptance Checker"
+  short_description: "Record acceptance, conditions, revisions, and blockers."
+  brand_color: "#0F766E"
+  default_prompt: "Use $architect-interviewer:decision-acceptance-checker to turn stakeholder answers into an architecture acceptance record."

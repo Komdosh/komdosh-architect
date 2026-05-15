@@ -1,0 +1,37 @@
+{
+  "name": "architect-interviewer",
+  "version": "0.2.0",
+  "description": "Architecture acceptance interviewer for presenting a completed service architecture, checking requirements coverage, interviewing stakeholders, and recording acceptance or required revisions.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "interview",
+    "acceptance",
+    "requirements",
+    "stakeholder-review",
+    "architecture-review",
+    "service-design",
+    "decision-validation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architect Interviewer",
+    "shortDescription": "Presents architecture and interviews stakeholders for acceptance.",
+    "longDescription": "Architect Interviewer helps a professional software architect present a completed service architecture, check that requirements are correctly covered, ask focused stakeholder interview questions, and produce a clear acceptance decision. It keeps the conversation source-grounded, separates accepted decisions from required revisions, and prevents architecture from being marked accepted when requirements, assumptions, risks, or owner decisions are still unresolved.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Use $architect-interviewer:architect-interviewer to present this service architecture and interview me for acceptance.",
+      "Use $architect-interviewer:architecture-brief-presenter to prepare a concise architecture presentation before stakeholder review.",
+      "Use $architect-interviewer:architecture-acceptance-review-gate to decide whether this architecture is accepted, accepted with conditions, needs revision, or blocked."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "architecture-security-designer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Security architecture assistant for designing trust boundaries, identity, authorization, data protection, abuse cases, API and integration controls, secrets, audit, compliance, observability, and security diagrams.",
   "author": {
     "name": "Architecture Tools"

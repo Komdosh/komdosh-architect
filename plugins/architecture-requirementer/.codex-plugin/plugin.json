@@ -1,6 +1,6 @@
 {
   "name": "architecture-requirementer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Requirements assistant for turning product goals into comprehensive architecture-ready software requirements.",
   "author": {
     "name": "Architecture Tools"

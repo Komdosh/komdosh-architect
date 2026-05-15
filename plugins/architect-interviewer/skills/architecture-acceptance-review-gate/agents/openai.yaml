@@ -1,0 +1,5 @@
+interface:
+  display_name: "Architecture Acceptance Review Gate"
+  short_description: "Check whether architecture acceptance is ready."
+  brand_color: "#0F766E"
+  default_prompt: "Use $architect-interviewer:architecture-acceptance-review-gate to verify whether this architecture can be accepted."

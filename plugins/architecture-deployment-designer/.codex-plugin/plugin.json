@@ -1,6 +1,6 @@
 {
   "name": "architecture-deployment-designer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Deployment architecture assistant for designing runtime topology, environments, network boundaries, scaling, rollout, reliability, DR, configuration, secrets, operations, and deployment diagrams.",
   "author": {
     "name": "Architecture Tools"

@@ -1,6 +1,6 @@
 {
   "name": "architecture-integration-designer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Integration architecture assistant for designing API-first, event, webhook, batch, and external-system interfaces with extensibility, versioning, resilience, security, and support in mind.",
   "author": {
     "name": "Architecture Tools"

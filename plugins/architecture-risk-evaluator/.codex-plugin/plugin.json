@@ -1,6 +1,6 @@
 {
   "name": "architecture-risk-evaluator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Architecture risk evaluation assistant for finding, prioritizing, and communicating technical, product, security, data, integration, deployment, operational, delivery, and decision risks before implementation.",
   "author": {
     "name": "Architecture Tools"
