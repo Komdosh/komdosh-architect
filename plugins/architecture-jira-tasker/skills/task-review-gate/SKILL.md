@@ -29,8 +29,10 @@ Reject or revise when any item fails:
 - task is smaller than a meaningful one-week delivery slice
 - task scope crosses unrelated review, release, or ownership boundaries
 - summary is vague or not outcome-oriented
+- description fails the 30-second rule or is longer than one screen without a strong reason
 - metadata contains placeholders, empty fields, or unsafe guesses
 - required Jira fields are unknown
+- estimates, story points, or hours are present when the target format says the team lead sets them
 - labels exceed three items
 - labels are generic process markers instead of specific service, application, platform, bounded-context, or capability labels
 - description is not structured for human scanning and QA validation
@@ -39,8 +41,12 @@ Reject or revise when any item fails:
 - out-of-scope boundaries are missing
 - dependencies, migration, release, or operational risks are hidden
 - QA acceptance criteria are not understandable or testable by QA
-- QA validation checklist is missing environment, test data, build, feature-flag, negative-path, or regression context where expected
+- Testing section is missing a one-line verification or a separate QA test-plan reference
+- separate QA test plan is missing when the task result can be verified in a running app, database, networked environment, or is a bug
+- QA validation context is missing environment, test data, build, feature-flag, negative-path, or regression context where expected
 - the task asks humans to infer implementation details instead of stating expected behavior
+- Jira creation or update is attempted before the user explicitly approves the final proposal
+- duplicate search was skipped before creating new Jira work
 
 ## Output
 
@@ -57,6 +63,7 @@ Label quality: <pass/fail and rationale>
 Human readability: <pass/fail and gap>
 QA checkability: <pass/fail and gap>
 Development-detail leakage: <pass/fail and examples or None>
+Creation safety: <pass/fail for explicit approval and duplicate search>
 Publish readiness: <ready/not ready>
 ```
 
@@ -67,6 +74,8 @@ Pass only when:
 - the task is ready to create in Jira without placeholder cleanup
 - humans can understand the outcome, scope, release context, and review expectations
 - QA can validate the acceptance criteria without reading implementation details
+- the Testing section is appropriate for the task and points to a separate test plan when needed
 - the task contains no developer-only instructions, file paths, internal modules, local commands, or code-level sequencing
 - the task has no more than three specific labels
+- creation or update has explicit user approval and duplicate search is complete
 - all blocked fields are resolved

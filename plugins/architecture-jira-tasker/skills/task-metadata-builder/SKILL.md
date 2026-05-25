@@ -17,6 +17,7 @@ Use:
 
 - scope contract from `$architecture-jira-tasker:task-scope-planner`
 - Jira project, board, epic, sprint, issue type, and custom field conventions
+- Jira format/profile docs when provided
 - source architecture docs and human-visible delivery targets
 - known team labels, components, priorities, versions, owners, and reviewers
 
@@ -31,6 +32,12 @@ Fill fields with concrete values.
 - prefer existing Jira values over invented labels, components, epics, or versions
 - if a required Jira field cannot be discovered or inferred safely, block creation and list the missing field
 - keep assignee, reviewer, and QA owner fields human-facing
+- choose `Story` for user-facing functionality, `Task` for technical or coordination work without direct user-facing behavior, and `Bug` for broken behavior
+- do not create child work as `Epic`; use existing epics/parents from the format profile
+- do not use unavailable issue types; if research/spike work has no `Spike` type, use `Task` plus a specific `spike` label when acceptable
+- attach each task to the parent/epic required by the format profile, except cross-cutting work that the profile explicitly allows without a parent
+- map priority through the target board's profile, such as P0 to `High`, P1 to `Medium`, and P2/P3 to `Low`
+- omit estimates, story points, and hours unless the target board requires them or the user explicitly requests them
 - use at most three labels, and make each one specific to the service, application, platform, bounded context, or capability
 - prefer labels such as `auth` for authorization service work or `mobile` for mobile application work
 - do not use broad process labels such as `architecture-ready`, `ai-agent`, `implementation`, or `human-review`
@@ -42,8 +49,8 @@ When local board rules are not more specific:
 
 - issue type: `Task`
 - priority: `Medium`, or `High` when it blocks a committed roadmap or release
-- estimate: `1w` or the closest Jira estimate field value
-- story points: `8` or `13` for a large delivery task, depending on board convention
+- estimate: omit unless required by the board
+- story points: omit unless required by the board
 - labels: choose up to three specific labels from the target service, application, platform, bounded context, or capability
 - assignee: delivery owner, team queue, or automation user supported by the board
 - reviewer: human technical owner or review group
@@ -67,8 +74,8 @@ Jira metadata:
 - Components: <components>
 - Labels: <up to three specific labels>
 - Fix version or milestone: <version/milestone or Not applicable>
-- Estimate: <time estimate>
-- Story points: <points or Not applicable>
+- Estimate: <required board value or Not applicable>
+- Story points: <required board value or Not applicable>
 - Delivery owner or queue: <team/owner/queue>
 - Human reviewer: <reviewer/group>
 - QA owner: <QA owner/group or Not applicable>
@@ -88,7 +95,7 @@ Before handing off metadata:
 - confirm every Jira-required field is present
 - confirm labels and components exist or are acceptable on the board
 - confirm labels are no more than three items and are specific enough for human routing
-- confirm estimate matches one-week delivery scope
+- confirm estimates, story points, and hours are omitted unless required by the board or explicitly requested
 - confirm assignee, reviewer, and QA owner are human-facing
 - confirm source docs are linked precisely enough for review when they are included
 - confirm metadata does not leak implementation details

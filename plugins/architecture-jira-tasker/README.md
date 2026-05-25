@@ -10,9 +10,13 @@ Use this plugin when the requested outcome is:
 - read completed architecture docs and create a delivery task
 - convert architecture decisions, constraints, diagrams, ADRs, and implementation notes into Jira work
 - produce one large task sized around one delivery week
-- fill Jira metadata, including project, issue type, priority, up to three specific labels, component, epic, sprint, estimate, owner, reviewer, dependencies, source docs, and release context
+- apply a provided Jira format profile for project, issue type, priority, parent/epic, workflow, description shape, and testing rules
+- fill Jira metadata, including project, issue type, priority, up to three specific labels, component, parent/epic, sprint or phase, owner, reviewer, QA owner, dependencies, source docs, and release context
 - write a structured task description that product, QA, reviewers, release managers, and support can understand
+- keep the description short enough for a team lead to understand in about 30 seconds
 - keep file paths, classes, internal modules, developer commands, migration scripts, and code-level sequencing out of the Jira issue
+- omit estimates, story points, and hours unless the board requires them or the user explicitly asks for them
+- propose the full task first, wait for explicit approval, and search for duplicates before creating Jira work
 - create the task on a Jira board when Jira tools are available
 
 Do not use it for unsettled architecture work.
@@ -27,6 +31,7 @@ The Jira task is for humans, even when implementation is later performed by an A
 - split only when independent review, ownership, release, or risk boundaries require separate tasks
 - the issue must include enough context for humans to understand outcome, scope, QA validation, release impact, and review evidence
 - implementation plans belong in architecture docs, pull requests, or private execution notes, not in the Jira task body
+- detailed QA steps belong in a separate test plan when the result can be checked in a running app, database, or networked environment
 
 ## Skill Grouping
 
@@ -46,11 +51,11 @@ A good task lets humans understand what is being delivered and how QA can check 
 It should include:
 
 - goal and business outcome
-- human handoff summary with product/service/application area, owner, reviewer, QA owner, labels, and estimate
+- human handoff summary with product/service/application area, owner, reviewer, QA owner, and labels
 - exact human-visible scope and out-of-scope boundaries
 - behavior, business rules, security/privacy constraints, rollout constraints, and operational expectations when applicable
 - dependencies and sequencing
-- QA acceptance criteria, negative paths, test data, environment/build context, and regression checks
+- QA acceptance criteria and a `Testing` section with either one-line verification or a separate test-plan reference
 - documentation, release, support, or operator updates
 - human review checklist
 - Jira metadata filled from board context or explicit assumptions
@@ -64,6 +69,9 @@ Reject or revise a task when it:
 - uses more than three labels or generic labels such as `architecture-ready`, `ai-agent`, `implementation`, or `human-review`
 - leaks development details such as file paths, internal modules, classes, developer commands, migration scripts, or code-level sequencing
 - lacks QA-checkable acceptance criteria and validation context
+- is too long to understand in about 30 seconds
+- includes estimates when the target format says the team lead owns estimates
+- skips duplicate search or creates/updates Jira before explicit approval
 - hides dependencies or migration/release risk
 - contains only prose without acceptance criteria and validation steps
 - creates a Jira issue before required board fields are known

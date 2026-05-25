@@ -26,13 +26,17 @@ Require:
 Create the Jira issue only after preflight validation.
 
 - use available Jira or Atlassian tools to create the issue
-- verify the project, issue type, priority, components, labels, parent epic, sprint, estimate, story points, and required custom fields
+- verify the project, issue type, priority, components, labels, parent epic, sprint or phase, and required custom fields
+- verify estimates, story points, or hours are omitted unless required by the board or explicitly requested by the user
 - verify labels are no more than three specific service, application, platform, bounded-context, or capability labels
 - verify the description does not expose development details such as file paths, classes, methods, internal modules, local commands, migration scripts, or implementation sequencing
 - verify QA acceptance criteria and QA validation checks are understandable without reading code or architecture internals
+- search for similar existing Jira issues before creating to avoid duplicates
+- show the final creation payload in chat and wait for explicit user approval before creating the Jira issue
+- for Jira updates, show the field/description diff in chat and wait for explicit user approval before updating
 - do not create placeholder issues
 - do not create multiple issues unless the user explicitly approves the split
-- if Jira requires post-create updates for sprint, epic, estimate, labels, links, or custom fields, perform those updates immediately after creation
+- if Jira requires post-create updates for sprint, epic, required estimate fields, labels, links, or custom fields, perform those updates immediately after creation
 - if a field is rejected, fix it using valid Jira values when safe; otherwise stop and report the exact rejected field
 
 ## Creation Payload
@@ -41,7 +45,7 @@ Prepare a payload with:
 
 ```text
 Project: <key>
-Issue type: Task
+Issue type: <Story|Task|Bug or board-specific type>
 Summary: <clear summary>
 Description: <self-contained description>
 Priority: <priority>
@@ -50,8 +54,8 @@ Components: <components>
 Epic or parent: <epic>
 Sprint or target phase: <sprint/phase>
 Fix version or milestone: <version/milestone>
-Estimate: <1w or board equivalent>
-Story points: <large-task value or Not applicable>
+Estimate: <required board value or Not applicable>
+Story points: <required board value or Not applicable>
 Delivery owner or queue: <team/owner/queue>
 Human reviewer: <reviewer/group>
 QA owner: <QA owner/group or Not applicable>
@@ -67,7 +71,7 @@ Return:
 Created Jira task: <KEY> <URL>
 Board: <board>
 Epic or parent: <epic or Not applicable>
-Estimate: <estimate/story points>
+Planning fields: <estimate/story points if required by board, otherwise Not applicable>
 Delivery owner or queue: <team/owner/queue>
 Human reviewer: <reviewer/group>
 QA owner: <QA owner/group or Not applicable>

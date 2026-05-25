@@ -36,7 +36,7 @@ Start from the work you need to finish, not from the full plugin list.
 | API, events, webhooks, or external systems | [`architecture-integration-designer`](plugins/architecture-integration-designer) | security, observability, deployment |
 | Runtime placement or production readiness | [`architecture-deployment-designer`](plugins/architecture-deployment-designer) | load, observability, security, risk |
 | Architecture ready for stakeholder sign-off | [`architect-interviewer`](plugins/architect-interviewer) | risk, Jira tasker, diagrammer |
-| Final implementation handoff | [`architecture-risk-evaluator`](plugins/architecture-risk-evaluator) | Jira tasker, diagrammer |
+| Final delivery handoff | [`architecture-risk-evaluator`](plugins/architecture-risk-evaluator) | Jira tasker, diagrammer |
 
 ## Recommended Flow
 
@@ -71,7 +71,7 @@ For everyday use, enable only the plugins that match the team workflow.
 | Design core | domain modeler, service designer, data designer, integration designer | Turning scope into system structure and contracts. |
 | Production readiness | load estimator, deployment designer, security designer, observability designer, risk evaluator | Preparing architecture for real operation. |
 | Acceptance | interviewer, risk evaluator, diagrammer | Presenting the architecture and confirming stakeholder acceptance. |
-| Delivery handoff | risk evaluator, Jira tasker, diagrammer | Converting approved architecture into implementation work. |
+| Delivery handoff | risk evaluator, Jira tasker, diagrammer | Converting approved architecture into human-readable Jira delivery work. |
 
 ## Install
 
