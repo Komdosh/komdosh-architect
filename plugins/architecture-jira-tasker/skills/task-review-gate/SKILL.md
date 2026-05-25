@@ -9,6 +9,7 @@ description: Review an architecture-derived Jira task for scope size, self-conta
 
 Review the Jira task before publishing.
 The gate protects the board from tiny, vague, under-specified, or placeholder-heavy tickets.
+It also checks that the task is convenient for Dev team execution and filtering.
 
 ## Required Inputs
 
@@ -30,6 +31,9 @@ Reject or revise when any item fails:
 - summary is vague or not outcome-oriented
 - metadata contains placeholders, empty fields, or unsafe guesses
 - required Jira fields are unknown
+- labels exceed three items
+- labels are generic process markers instead of specific service, application, platform, bounded-context, or capability labels
+- description is not structured for Dev team scanning
 - architecture decisions are not linked to sources
 - out-of-scope boundaries are missing
 - dependencies, migration, release, or operational risks are hidden
@@ -49,6 +53,7 @@ Required fixes:
 - <fix or None>
 One-week scope check: <pass/fail and rationale>
 Metadata completeness: <pass/fail and missing fields>
+Label quality: <pass/fail and rationale>
 Self-contained context: <pass/fail and gap>
 Human review model: <pass/fail>
 Publish readiness: <ready/not ready>
@@ -61,4 +66,5 @@ Pass only when:
 - the task is ready to create in Jira without placeholder cleanup
 - the AI agent can execute the work in one delivery pass
 - the human reviewer has a clear checklist and validation evidence expectations
+- the Dev team gets a structured description and no more than three specific labels
 - all blocked fields are resolved

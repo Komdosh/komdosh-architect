@@ -9,6 +9,7 @@ description: Create rich, self-contained Jira implementation tasks from complete
 
 Turn completed architecture documentation into a Jira implementation task that an AI agent can execute quickly and independently.
 The task must be large enough to justify an AI delivery pass, self-contained enough to avoid architecture follow-up questions, and ready for human review after implementation.
+The Jira description must be structured for the Dev team: easy to scan, concrete about implementation targets, and organized around deliverables, acceptance criteria, validation, and review.
 
 Use this skill when the user asks to create Jira tasks, implementation tickets, delivery tasks, board tasks, backlog items, or AI-agent work from completed architecture docs.
 
@@ -73,7 +74,7 @@ Fill every useful metadata field.
 - sprint or target phase
 - priority
 - components
-- labels
+- labels, capped at three specific delivery-area labels
 - fix version, release train, or target milestone
 - assignee or AI-agent owner role
 - human reviewer or review group
@@ -87,24 +88,35 @@ Fill every useful metadata field.
 Use `Not applicable` only when a field truly does not apply.
 Do not leave placeholders such as `TBD`, `TODO`, `unknown`, or `fill later`.
 
+## Label Policy
+
+Use labels as precise routing and filtering signals for the Dev team.
+
+- use at most three labels
+- choose labels from the task's concrete target service, application, platform, bounded context, or capability
+- prefer specific labels such as `auth`, `mobile`, `payments`, `observability`, or `search`
+- do not add generic process labels such as `architecture-ready`, `ai-agent`, `implementation`, or `human-review`
+- if Jira requires generic labels or more than three labels, report that board constraint explicitly before creation
+
 ## Task Description Contract
 
-The Jira description must include:
+The Jira description must be structured for Dev team execution and include:
 
 1. Goal
-2. Architecture sources
-3. Business outcome
-4. Implementation scope
-5. Out of scope
-6. Architecture decisions and constraints
-7. Required implementation changes
-8. Data, API, integration, security, observability, and deployment notes
-9. Dependencies and sequencing
-10. Acceptance criteria
-11. Validation plan
-12. Documentation updates
-13. AI-agent execution notes
-14. Human review checklist
+2. Dev team handoff
+3. Architecture sources
+4. Business outcome
+5. Implementation scope
+6. Out of scope
+7. Architecture decisions and constraints
+8. Required implementation changes
+9. Data, API, integration, security, observability, and deployment notes
+10. Dependencies and sequencing
+11. Acceptance criteria
+12. Validation plan
+13. Documentation updates
+14. AI-agent execution notes
+15. Human review checklist
 
 ## Output
 

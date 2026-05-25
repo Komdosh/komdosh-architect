@@ -1,7 +1,7 @@
 # Architecture Jira Tasker
 
 Architecture Jira Tasker is a Codex plugin for creating Jira implementation tasks after architecture documentation is complete.
-It turns architecture docs into large, self-contained delivery tasks for fast AI agents.
+It turns architecture docs into large, self-contained delivery tasks for fast AI agents, with structured descriptions that are convenient for Dev team execution and review.
 
 ## Scope Fit
 
@@ -10,8 +10,8 @@ Use this plugin when the requested outcome is:
 - read completed architecture docs and create an implementation task
 - convert architecture decisions, constraints, diagrams, ADRs, and implementation notes into Jira work
 - produce one large task sized around one AI-agent delivery week
-- fill Jira metadata, including project, issue type, priority, labels, component, epic, sprint, estimate, owner, reviewer, dependencies, source docs, and release context
-- write a task description that an implementation agent can execute without asking for architectural context
+- fill Jira metadata, including project, issue type, priority, up to three specific labels, component, epic, sprint, estimate, owner, reviewer, dependencies, source docs, and release context
+- write a structured task description that a Dev team can scan and an implementation agent can execute without asking for architectural context
 - create the task on a Jira board when Jira tools are available
 
 Do not use it for unsettled architecture work.
@@ -46,6 +46,7 @@ It should include:
 
 - architecture source links and important decisions
 - implementation goal and business outcome
+- Dev team handoff summary with target repo, service, module, owner, reviewer, labels, and estimate
 - exact scope and out-of-scope boundaries
 - repo, package, module, service, API, data, security, observability, and deployment expectations when applicable
 - dependencies and sequencing
@@ -53,12 +54,15 @@ It should include:
 - documentation updates
 - human review checklist
 - Jira metadata filled from board context or explicit assumptions
+- no more than three specific labels, such as `auth` for authorization service work or `mobile` for mobile application work
 
 Reject or revise a task when it:
 
 - is smaller than a meaningful AI-agent delivery slice
 - depends on undocumented architecture decisions
 - leaves metadata as placeholders
+- uses more than three labels or generic labels such as `architecture-ready`, `ai-agent`, `implementation`, or `human-review`
+- lacks a structured Dev team handoff in the description
 - hides dependencies or migration/release risk
 - gives a human developer implementation work outside review
 - contains only prose without acceptance criteria and validation steps

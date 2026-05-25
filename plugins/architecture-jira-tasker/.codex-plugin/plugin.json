@@ -1,7 +1,7 @@
 {
   "name": "architecture-jira-tasker",
   "version": "0.2.0",
-  "description": "Architecture-to-Jira assistant for turning completed architecture docs into rich, self-contained one-week implementation tasks for fast AI agents, with human work limited to review.",
+  "description": "Architecture-to-Jira assistant for turning completed architecture docs into structured, Dev-team-friendly one-week implementation tasks for fast AI agents, with specific labels and human work limited to review.",
   "author": {
     "name": "Architecture Tools"
   },
@@ -19,8 +19,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Architecture Jira Tasker",
-    "shortDescription": "Creates Jira-ready implementation tasks from architecture docs.",
-    "longDescription": "Architecture Jira Tasker converts completed architecture documentation into large, self-contained Jira implementation tasks sized for fast AI-agent delivery. It plans a coherent one-week implementation scope, fills rich Jira metadata, writes a complete issue description with acceptance criteria and validation steps, and creates the task on the Jira board when a Jira connector is available. Human effort is scoped to review, approval, and merge decisions.",
+    "shortDescription": "Creates Dev-team-friendly Jira implementation tasks from architecture docs.",
+    "longDescription": "Architecture Jira Tasker converts completed architecture documentation into large, self-contained Jira implementation tasks sized for fast AI-agent delivery. It plans a coherent one-week implementation scope, fills rich Jira metadata, writes a structured Dev-team-friendly issue description with acceptance criteria and validation steps, limits labels to specific delivery-area signals, and creates the task on the Jira board when a Jira connector is available. Human effort is scoped to review, approval, and merge decisions.",
     "developerName": "Architecture Tools",
     "category": "Developer Tools",
     "capabilities": [

@@ -26,6 +26,7 @@ Create the Jira issue only after preflight validation.
 
 - use available Jira or Atlassian tools to create the issue
 - verify the project, issue type, priority, components, labels, parent epic, sprint, estimate, story points, and required custom fields
+- verify labels are no more than three specific service, application, platform, bounded-context, or capability labels
 - do not create placeholder issues
 - do not create multiple issues unless the user explicitly approves the split
 - if Jira requires post-create updates for sprint, epic, estimate, labels, links, or custom fields, perform those updates immediately after creation
@@ -41,7 +42,7 @@ Issue type: Task
 Summary: <clear summary>
 Description: <self-contained description>
 Priority: <priority>
-Labels: <labels>
+Labels: <up to three specific labels>
 Components: <components>
 Epic or parent: <epic>
 Sprint or target phase: <sprint/phase>
@@ -65,7 +66,7 @@ Epic or parent: <epic or Not applicable>
 Estimate: <estimate/story points>
 Assignee or owner: <AI-agent owner/queue>
 Human reviewer: <reviewer/group>
-Labels: <labels>
+Labels: <up to three specific labels>
 Components: <components>
 Residual risks: <none or concise list>
 ```

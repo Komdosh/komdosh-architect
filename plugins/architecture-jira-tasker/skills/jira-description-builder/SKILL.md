@@ -9,6 +9,7 @@ description: Write a self-contained Jira issue description for an AI implementat
 
 Write the Jira description for an architecture-derived implementation task.
 The description must be complete enough for an AI agent to implement the work and for a human to review it.
+It must also be convenient for the Dev team: structured, scannable, and concrete about implementation targets, validation, and review expectations.
 
 ## Required Inputs
 
@@ -24,6 +25,7 @@ Require:
 Write in Jira-friendly Markdown or the format required by the Jira tool.
 
 - start with the outcome, not background
+- keep the section order stable so Dev team readers can scan the same fields across tasks
 - include source document links before implementation detail
 - keep architecture decisions tied to their source
 - make scope and out-of-scope boundaries explicit
@@ -31,6 +33,7 @@ Write in Jira-friendly Markdown or the format required by the Jira tool.
 - include validation commands, manual checks, and negative paths when relevant
 - include documentation updates and release notes when the change is user-facing or operator-facing
 - keep human work in the review checklist
+- avoid long architecture prose when a concrete deliverable, file/module target, API, command, or review check is clearer
 
 ## Required Description Shape
 
@@ -39,6 +42,13 @@ Use this structure:
 ```markdown
 ## Goal
 <one paragraph>
+
+## Dev team handoff
+- Target: <repo/service/module/application>
+- Owner or queue: <AI-agent owner/queue>
+- Human reviewer: <reviewer/group>
+- Labels: <up to three specific labels>
+- Estimate: <one-week estimate/story points>
 
 ## Architecture sources
 - <doc/ADR/diagram/link>
@@ -56,7 +66,7 @@ Use this structure:
 - <decision or constraint with source>
 
 ## Required implementation changes
-- <repo/module/API/data/test/doc change>
+- <repo/module/API/data/test/doc change grouped by implementation target>
 
 ## Data, API, security, observability, and deployment notes
 - Data: <requirement or Not applicable>

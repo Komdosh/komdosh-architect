@@ -9,6 +9,7 @@ description: Fill rich Jira metadata for architecture-derived AI-agent implement
 
 Build the Jira metadata set for an implementation task created from completed architecture docs.
 The metadata must be rich enough for board planning, filtering, ownership, review, and release tracking.
+Labels must stay specific and sparse enough to be useful for Dev team filtering.
 
 ## Required Inputs
 
@@ -30,6 +31,9 @@ Fill fields with concrete values.
 - prefer existing Jira values over invented labels, components, epics, or versions
 - if a required Jira field cannot be discovered or inferred safely, block creation and list the missing field
 - keep human identity in reviewer fields, not implementation ownership, unless the board requires a human assignee
+- use at most three labels, and make each one specific to the service, application, platform, bounded context, or capability
+- prefer labels such as `auth` for authorization service work or `mobile` for mobile application work
+- do not use broad process labels such as `architecture-ready`, `ai-agent`, `implementation`, or `human-review`
 
 ## Default Metadata Policy
 
@@ -39,7 +43,7 @@ When local board rules are not more specific:
 - priority: `Medium`, or `High` when it blocks a committed roadmap or release
 - estimate: `1w` or the closest Jira estimate field value
 - story points: `8` or `13` for a large AI-agent task, depending on board convention
-- labels: include `architecture-ready`, `ai-agent`, `implementation`, and `human-review`
+- labels: choose up to three specific labels from the target service, application, platform, bounded context, or capability
 - assignee: AI-agent owner role, automation user, or implementation queue supported by the board
 - reviewer: human technical owner or review group
 - components: derive from service, bounded context, platform area, or repo module
@@ -59,7 +63,7 @@ Jira metadata:
 - Sprint or target phase: <sprint/phase or Not applicable>
 - Priority: <priority>
 - Components: <components>
-- Labels: <labels>
+- Labels: <up to three specific labels>
 - Fix version or milestone: <version/milestone or Not applicable>
 - Estimate: <time estimate>
 - Story points: <points or Not applicable>
@@ -80,6 +84,7 @@ Before handing off metadata:
 
 - confirm every Jira-required field is present
 - confirm labels and components exist or are acceptable on the board
+- confirm labels are no more than three items and are specific enough for Dev team routing
 - confirm estimate matches one-week AI-agent scope
 - confirm reviewer is human-facing and implementation owner is AI-agent-facing
 - confirm source docs are linked precisely enough for review
