@@ -58,7 +58,7 @@ For existing systems, start with `architecture-decision-discoverer` so current A
 | 10 | [`architecture-observability-designer`](plugins/architecture-observability-designer) | Design SLIs, SLOs, logs, metrics, traces, dashboards, alerts, diagnostics, and incident support. |
 | 11 | [`architecture-risk-evaluator`](plugins/architecture-risk-evaluator) | Prioritize architecture risks, validation work, mitigations, owners, and go/no-go readiness. |
 | 12 | [`architect-interviewer`](plugins/architect-interviewer) | Present completed architecture, interview stakeholders, and record acceptance or required revisions. |
-| 13 | [`architecture-jira-tasker`](plugins/architecture-jira-tasker) | Create structured, Dev-team-friendly Jira implementation tasks from completed architecture docs. |
+| 13 | [`architecture-jira-tasker`](plugins/architecture-jira-tasker) | Create human-readable, QA-checkable Jira delivery tasks from completed architecture docs. |
 | Any | [`architecture-diagrammer`](plugins/architecture-diagrammer) | Create source-backed architecture diagrams from any stage output. |
 
 ## Recommended Sets
@@ -190,7 +190,7 @@ Architecture documents should be compact, self-contained, and easy to scan.
 | [`architecture-decision-discoverer`](plugins/architecture-decision-discoverer) | ADR and decision-note discovery, constraint extraction, drift detection, and decision-context briefs. |
 | [`architecture-risk-evaluator`](plugins/architecture-risk-evaluator) | Architecture risks, assumptions, prioritization, validation spikes, mitigations, owners, and go/no-go readiness. |
 | [`architect-interviewer`](plugins/architect-interviewer) | Stakeholder-facing architecture presentation, requirements coverage interviews, acceptance decisions, and revision records. |
-| [`architecture-jira-tasker`](plugins/architecture-jira-tasker) | Dev-team-friendly Jira tasks with structured descriptions and specific labels. |
+| [`architecture-jira-tasker`](plugins/architecture-jira-tasker) | Human-readable Jira tasks with QA-checkable criteria and specific labels. |
 
 ## Suggested Plugins To Add Next
 

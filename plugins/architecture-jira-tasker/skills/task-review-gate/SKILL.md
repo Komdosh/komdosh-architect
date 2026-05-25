@@ -1,6 +1,6 @@
 ---
 name: task-review-gate
-description: Review an architecture-derived Jira task for scope size, self-contained delivery context, metadata completeness, and human-review-only operating model.
+description: Review an architecture-derived Jira task for human readability, QA-checkable criteria, metadata completeness, and absence of leaked development details.
 ---
 
 # Task Review Gate
@@ -9,7 +9,7 @@ description: Review an architecture-derived Jira task for scope size, self-conta
 
 Review the Jira task before publishing.
 The gate protects the board from tiny, vague, under-specified, or placeholder-heavy tickets.
-It also checks that the task is convenient for Dev team execution and filtering.
+It also checks that the task is convenient for human review and QA validation without exposing implementation details.
 
 ## Required Inputs
 
@@ -25,22 +25,22 @@ Require:
 
 Reject or revise when any item fails:
 
-- architecture docs are not complete enough for implementation
-- task is smaller than a meaningful one-week AI-agent delivery slice
+- architecture docs are not complete enough for delivery
+- task is smaller than a meaningful one-week delivery slice
 - task scope crosses unrelated review, release, or ownership boundaries
 - summary is vague or not outcome-oriented
 - metadata contains placeholders, empty fields, or unsafe guesses
 - required Jira fields are unknown
 - labels exceed three items
 - labels are generic process markers instead of specific service, application, platform, bounded-context, or capability labels
-- description is not structured for Dev team scanning
-- architecture decisions are not linked to sources
+- description is not structured for human scanning and QA validation
+- architecture decisions are copied as internal design detail instead of translated into behavior or constraints
+- development details leak into the Jira task, including file paths, classes, methods, internal modules, local commands, migration scripts, or implementation sequencing
 - out-of-scope boundaries are missing
 - dependencies, migration, release, or operational risks are hidden
-- acceptance criteria are not testable
-- validation plan is missing commands or checks where they are expected
-- human work appears in implementation steps instead of review steps
-- the task could not be executed by an AI agent without asking for architecture context
+- QA acceptance criteria are not understandable or testable by QA
+- QA validation checklist is missing environment, test data, build, feature-flag, negative-path, or regression context where expected
+- the task asks humans to infer implementation details instead of stating expected behavior
 
 ## Output
 
@@ -51,11 +51,12 @@ Review decision: Pass | Revise | Block
 Reason: <short reason>
 Required fixes:
 - <fix or None>
-One-week scope check: <pass/fail and rationale>
+One-week delivery scope check: <pass/fail and rationale>
 Metadata completeness: <pass/fail and missing fields>
 Label quality: <pass/fail and rationale>
-Self-contained context: <pass/fail and gap>
-Human review model: <pass/fail>
+Human readability: <pass/fail and gap>
+QA checkability: <pass/fail and gap>
+Development-detail leakage: <pass/fail and examples or None>
 Publish readiness: <ready/not ready>
 ```
 
@@ -64,7 +65,8 @@ Publish readiness: <ready/not ready>
 Pass only when:
 
 - the task is ready to create in Jira without placeholder cleanup
-- the AI agent can execute the work in one delivery pass
-- the human reviewer has a clear checklist and validation evidence expectations
-- the Dev team gets a structured description and no more than three specific labels
+- humans can understand the outcome, scope, release context, and review expectations
+- QA can validate the acceptance criteria without reading implementation details
+- the task contains no developer-only instructions, file paths, internal modules, local commands, or code-level sequencing
+- the task has no more than three specific labels
 - all blocked fields are resolved

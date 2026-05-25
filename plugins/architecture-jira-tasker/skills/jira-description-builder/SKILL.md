@@ -1,15 +1,15 @@
 ---
 name: jira-description-builder
-description: Write a self-contained Jira issue description for an AI implementation agent from architecture docs, metadata, and acceptance criteria.
+description: Write a human-readable Jira issue description with QA-checkable acceptance criteria and no leaked development details.
 ---
 
 # Jira Description Builder
 
 ## Purpose
 
-Write the Jira description for an architecture-derived implementation task.
-The description must be complete enough for an AI agent to implement the work and for a human to review it.
-It must also be convenient for the Dev team: structured, scannable, and concrete about implementation targets, validation, and review expectations.
+Write the Jira description for an architecture-derived delivery task.
+The description must be complete enough for humans to understand the outcome, scope, QA expectations, release context, and review requirements.
+It must not expose development details that belong in architecture docs, pull requests, or private execution notes.
 
 ## Required Inputs
 
@@ -18,22 +18,23 @@ Require:
 - scope contract
 - filled Jira metadata
 - architecture docs, ADRs, diagrams, and implementation notes
-- implementation repository, service, module, package, API, data, security, deployment, and observability context when applicable
+- product area, service, application, component, release, QA, security, deployment, and observability context when applicable
 
 ## Description Rules
 
 Write in Jira-friendly Markdown or the format required by the Jira tool.
 
 - start with the outcome, not background
-- keep the section order stable so Dev team readers can scan the same fields across tasks
-- include source document links before implementation detail
-- keep architecture decisions tied to their source
+- keep the section order stable so human readers and QA can scan the same fields across tasks
+- include source document links only when useful for human review
+- translate architecture decisions into human-readable behavior, constraints, and verification expectations
 - make scope and out-of-scope boundaries explicit
-- include acceptance criteria that are testable or reviewable
-- include validation commands, manual checks, and negative paths when relevant
+- include acceptance criteria that QA can test or review directly
+- include QA validation steps, test data, environments, build or feature-flag context, and negative paths when relevant
 - include documentation updates and release notes when the change is user-facing or operator-facing
 - keep human work in the review checklist
-- avoid long architecture prose when a concrete deliverable, file/module target, API, command, or review check is clearer
+- do not include file paths, class names, method names, internal package/module plans, developer commands, database migration instructions, or code-level sequencing
+- mention APIs, logs, dashboards, or operational tools only when they are approved QA or operations verification surfaces
 
 ## Required Description Shape
 
@@ -43,69 +44,60 @@ Use this structure:
 ## Goal
 <one paragraph>
 
-## Dev team handoff
-- Target: <repo/service/module/application>
-- Owner or queue: <AI-agent owner/queue>
+## Human handoff
+- Area: <product/service/application area>
+- Delivery owner or queue: <team/owner>
 - Human reviewer: <reviewer/group>
+- QA owner: <QA owner/group or Not applicable>
 - Labels: <up to three specific labels>
-- Estimate: <one-week estimate/story points>
-
-## Architecture sources
-- <doc/ADR/diagram/link>
+- Estimate: <estimate/story points>
 
 ## Business outcome
 - <outcome>
 
-## Implementation scope
-- <deliverable>
+## User-visible or operator-visible scope
+- <human-visible deliverable or behavior>
 
 ## Out of scope
 - <non-goal>
 
-## Architecture decisions and constraints
-- <decision or constraint with source>
+## Behavior and constraints
+- <expected behavior, business rule, security/privacy constraint, rollout constraint, or Not applicable>
 
-## Required implementation changes
-- <repo/module/API/data/test/doc change grouped by implementation target>
+## QA acceptance criteria
+- [ ] <testable criterion>
 
-## Data, API, security, observability, and deployment notes
-- Data: <requirement or Not applicable>
-- API: <requirement or Not applicable>
-- Security: <requirement or Not applicable>
-- Observability: <requirement or Not applicable>
-- Deployment: <requirement or Not applicable>
+## QA validation checklist
+- <manual check, approved QA tool check, negative path, regression check, or release/build check>
+
+## QA environment, data, and release context
+- Environment/build: <environment, build number, feature flag, or Not applicable>
+- Test data/accounts: <data setup QA can use or Not applicable>
+- Rollout/release notes: <release context or Not applicable>
 
 ## Dependencies and sequencing
 - <dependency or Not applicable>
 
-## Acceptance criteria
-- [ ] <testable criterion>
-
-## Validation plan
-- <command/check>
-
-## Documentation updates
-- <doc update or Not applicable>
-
-## AI-agent execution notes
-- Implement, test, document, and prepare for review in one delivery pass.
-- Do not change architecture decisions; stop and escalate if a listed decision is impossible to implement.
+## Documentation and support notes
+- <user-facing, QA-facing, support-facing, or operator-facing doc/update or Not applicable>
 
 ## Human review checklist
-- [ ] Architecture decisions were followed.
-- [ ] Acceptance criteria are met.
-- [ ] Tests and validation evidence are attached.
-- [ ] Security, data, observability, and release impacts were reviewed.
+- [ ] Scope and out-of-scope boundaries are clear.
+- [ ] QA acceptance criteria are checkable without reading implementation details.
+- [ ] QA validation evidence is attached or linked.
+- [ ] Security, privacy, operational, and release impacts were reviewed.
 ```
 
 ## Acceptance Criteria Rules
 
 Acceptance criteria must:
 
-- be observable from code, tests, docs, API behavior, UI behavior, deployment output, or review evidence
+- be understandable by QA without reading code, implementation plans, pull requests, or architecture internals
+- be observable through UI behavior, approved API behavior, user-visible output, operator-visible output, documentation, support workflow, build/release state, or agreed QA tools
 - include success and failure paths when behavior has branching logic
-- cover documentation and operational validation when relevant
+- cover documentation, regression, release, and operational validation when relevant
 - avoid vague criteria such as `works correctly`, `is scalable`, or `is secure`
+- avoid developer-only checks such as unit test names, source files, migration scripts, class names, internal package names, or local commands
 
 ## Output
 

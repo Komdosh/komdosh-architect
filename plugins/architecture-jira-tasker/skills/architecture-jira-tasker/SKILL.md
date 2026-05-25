@@ -1,17 +1,17 @@
 ---
 name: architecture-jira-tasker
-description: Create rich, self-contained Jira implementation tasks from completed architecture docs, sized around one AI-agent delivery week, with humans involved only at review.
+description: Create human-readable, QA-checkable Jira delivery tasks from completed architecture docs, keeping development details out of the task body.
 ---
 
 # Architecture Jira Tasker
 
 ## Purpose
 
-Turn completed architecture documentation into a Jira implementation task that an AI agent can execute quickly and independently.
-The task must be large enough to justify an AI delivery pass, self-contained enough to avoid architecture follow-up questions, and ready for human review after implementation.
-The Jira description must be structured for the Dev team: easy to scan, concrete about implementation targets, and organized around deliverables, acceptance criteria, validation, and review.
+Turn completed architecture documentation into a Jira delivery task that humans can understand, plan, review, and QA.
+The task must be large enough to represent a meaningful delivery slice, self-contained enough to avoid architecture follow-up questions, and ready for QA validation after delivery.
+The Jira description must not leak development details: no file paths, classes, methods, internal module plans, implementation commands, migration scripts, or coding instructions unless the team explicitly requires that field.
 
-Use this skill when the user asks to create Jira tasks, implementation tickets, delivery tasks, board tasks, backlog items, or AI-agent work from completed architecture docs.
+Use this skill when the user asks to create Jira tasks, delivery tasks, board tasks, backlog items, or QA-checkable work from completed architecture docs.
 
 ## Core Rule
 
@@ -22,34 +22,34 @@ Create delivery tasks only after architecture is settled.
 - do not invent missing architecture decisions to make a Jira task look complete
 - surface unresolved architecture questions as blockers, not as task assumptions
 
-## One-Week AI-Agent Scope Rule
+## One-Week Delivery Scope Rule
 
-Default to one large task, not a set of small human-sized tickets.
+Default to one meaningful delivery task, not a set of tiny technical tickets.
 
-- target size: about one calendar week for a fast AI implementation agent
+- target size: about one calendar week for the implementation pass
 - if the board uses story points, default to a large task such as 8 or 13 points unless local board conventions say otherwise
-- merge small related changes into one coherent implementation task
+- merge small related technical changes into one coherent human-visible delivery task
 - split only when the work crosses independent ownership, release, review, migration, or safety boundaries
-- keep human work limited to review, approval, merge, and release acceptance
+- keep the Jira task focused on outcome, scope, QA validation, release, and review
 
 ## Required Inputs
 
 Load the minimum needed context:
 
 - completed architecture docs, ADRs, diagrams, implementation plans, or architecture handoff notes
-- implementation repository, service, module, or package target when known
+- product area, service, application, component, release, or QA target when known
 - Jira project, board, epic, sprint, issue type, component, and required custom fields when available
 - existing roadmap, release, dependency, migration, or operational notes
-- local team conventions for labels, priorities, story points, estimates, assignees, and reviewers
+- local team conventions for labels, priorities, story points, estimates, assignees, reviewers, and QA owners
 
 If Jira target metadata is missing, use Jira tools to discover it when available.
 Ask only when a required Jira field cannot be inferred safely or discovered.
 
 ## Skill Flow
 
-1. Use `$architecture-jira-tasker:task-scope-planner` to shape one coherent AI-agent implementation scope.
-2. Use `$architecture-jira-tasker:task-metadata-builder` to fill Jira metadata and delivery ownership.
-3. Use `$architecture-jira-tasker:jira-description-builder` to write the issue description.
+1. Use `$architecture-jira-tasker:task-scope-planner` to shape one coherent human-visible delivery scope.
+2. Use `$architecture-jira-tasker:task-metadata-builder` to fill Jira metadata, delivery ownership, and QA ownership.
+3. Use `$architecture-jira-tasker:jira-description-builder` to write the human-readable issue description.
 4. Use `$architecture-jira-tasker:task-review-gate` to check readiness before creating anything.
 5. Use `$architecture-jira-tasker:jira-task-publisher` to create the issue when Jira tools are available and the user requested creation.
 
@@ -76,21 +76,30 @@ Fill every useful metadata field.
 - components
 - labels, capped at three specific delivery-area labels
 - fix version, release train, or target milestone
-- assignee or AI-agent owner role
-- human reviewer or review group
+- delivery owner or team queue
+- QA owner, human reviewer, or review group
 - estimate or story points
 - due target when the board uses it
 - dependencies and linked issues
-- source architecture docs
-- implementation repo and module
-- affected API, data, security, observability, deployment, and documentation areas
+- source architecture docs when the board expects links
+- affected product, service, application, release, QA, documentation, or operational areas
 
 Use `Not applicable` only when a field truly does not apply.
 Do not leave placeholders such as `TBD`, `TODO`, `unknown`, or `fill later`.
 
+## Human-Only Task Boundary
+
+The Jira task is for humans.
+
+- write only information useful to product owners, delivery leads, QA, reviewers, release managers, and support
+- translate architecture decisions into expected behavior, constraints, rollout notes, and QA-visible outcomes
+- keep implementation plans in architecture docs, pull requests, or agent-private execution notes, not in the Jira description
+- do not include file paths, class names, method names, internal package/module plans, developer commands, database migration instructions, or code-level sequencing
+- include technical terms only when QA or operations must use them to verify the work
+
 ## Label Policy
 
-Use labels as precise routing and filtering signals for the Dev team.
+Use labels as precise routing and filtering signals for humans.
 
 - use at most three labels
 - choose labels from the task's concrete target service, application, platform, bounded context, or capability
@@ -100,23 +109,20 @@ Use labels as precise routing and filtering signals for the Dev team.
 
 ## Task Description Contract
 
-The Jira description must be structured for Dev team execution and include:
+The Jira description must be structured for human execution, review, and QA:
 
 1. Goal
-2. Dev team handoff
-3. Architecture sources
-4. Business outcome
-5. Implementation scope
-6. Out of scope
-7. Architecture decisions and constraints
-8. Required implementation changes
-9. Data, API, integration, security, observability, and deployment notes
+2. Human handoff
+3. Business outcome
+4. User-visible or operator-visible scope
+5. Out of scope
+6. Behavior and constraints
+7. QA acceptance criteria
+8. QA validation checklist
+9. QA environment, data, and release context
 10. Dependencies and sequencing
-11. Acceptance criteria
-12. Validation plan
-13. Documentation updates
-14. AI-agent execution notes
-15. Human review checklist
+11. Documentation and support notes
+12. Human review checklist
 
 ## Output
 
@@ -125,7 +131,7 @@ When creating the task, return:
 ```text
 Created Jira task: <KEY> <URL>
 Summary: <summary>
-Scope size: <estimate/story points and why it is one-week AI-agent scope>
+Scope size: <estimate/story points and why it is one-week delivery scope>
 Metadata: <compact field list>
 Human review: <reviewer or review group>
 Residual risks: <short list or none>
@@ -148,5 +154,5 @@ Stop before creating Jira work when:
 - architecture source docs are not settled
 - required Jira board fields cannot be discovered or inferred safely
 - task scope is too small and cannot be merged with adjacent work
-- the task would require a human developer to design or implement instead of only review
-- acceptance criteria cannot be made testable from the available context
+- the task description would expose development details instead of human-facing behavior
+- QA acceptance criteria cannot be made testable from the available context

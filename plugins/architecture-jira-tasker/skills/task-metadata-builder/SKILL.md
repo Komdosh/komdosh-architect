@@ -1,15 +1,15 @@
 ---
 name: task-metadata-builder
-description: Fill rich Jira metadata for architecture-derived AI-agent implementation tasks, avoiding placeholders and unsafe guesses.
+description: Fill human-facing Jira metadata for architecture-derived delivery tasks, avoiding placeholders, unsafe guesses, and implementation detail leaks.
 ---
 
 # Task Metadata Builder
 
 ## Purpose
 
-Build the Jira metadata set for an implementation task created from completed architecture docs.
+Build the Jira metadata set for a delivery task created from completed architecture docs.
 The metadata must be rich enough for board planning, filtering, ownership, review, and release tracking.
-Labels must stay specific and sparse enough to be useful for Dev team filtering.
+Labels must stay specific and sparse enough to be useful for human filtering and QA routing.
 
 ## Required Inputs
 
@@ -17,7 +17,7 @@ Use:
 
 - scope contract from `$architecture-jira-tasker:task-scope-planner`
 - Jira project, board, epic, sprint, issue type, and custom field conventions
-- source architecture docs and implementation targets
+- source architecture docs and human-visible delivery targets
 - known team labels, components, priorities, versions, owners, and reviewers
 
 Use Jira tools to inspect valid projects, boards, epics, components, versions, statuses, priorities, and required fields when available.
@@ -30,10 +30,11 @@ Fill fields with concrete values.
 - use `Not applicable` only when the field truly does not apply
 - prefer existing Jira values over invented labels, components, epics, or versions
 - if a required Jira field cannot be discovered or inferred safely, block creation and list the missing field
-- keep human identity in reviewer fields, not implementation ownership, unless the board requires a human assignee
+- keep assignee, reviewer, and QA owner fields human-facing
 - use at most three labels, and make each one specific to the service, application, platform, bounded context, or capability
 - prefer labels such as `auth` for authorization service work or `mobile` for mobile application work
 - do not use broad process labels such as `architecture-ready`, `ai-agent`, `implementation`, or `human-review`
+- do not expose file paths, class names, internal module names, implementation commands, or private execution notes in metadata fields
 
 ## Default Metadata Policy
 
@@ -42,12 +43,13 @@ When local board rules are not more specific:
 - issue type: `Task`
 - priority: `Medium`, or `High` when it blocks a committed roadmap or release
 - estimate: `1w` or the closest Jira estimate field value
-- story points: `8` or `13` for a large AI-agent task, depending on board convention
+- story points: `8` or `13` for a large delivery task, depending on board convention
 - labels: choose up to three specific labels from the target service, application, platform, bounded context, or capability
-- assignee: AI-agent owner role, automation user, or implementation queue supported by the board
+- assignee: delivery owner, team queue, or automation user supported by the board
 - reviewer: human technical owner or review group
-- components: derive from service, bounded context, platform area, or repo module
-- source docs: include architecture docs, ADRs, diagrams, and implementation plan links
+- QA owner: QA owner or review group when the board supports it
+- components: derive from service, bounded context, platform area, product area, or application
+- source docs: include architecture docs, ADRs, diagrams, and approved handoff notes only when the board expects source references
 
 ## Output
 
@@ -67,13 +69,14 @@ Jira metadata:
 - Fix version or milestone: <version/milestone or Not applicable>
 - Estimate: <time estimate>
 - Story points: <points or Not applicable>
-- Assignee or owner: <AI-agent owner/queue>
+- Delivery owner or queue: <team/owner/queue>
 - Human reviewer: <reviewer/group>
+- QA owner: <QA owner/group or Not applicable>
 - Linked issues: <links or Not applicable>
 - Dependencies: <dependencies or Not applicable>
-- Source docs: <paths/URLs>
-- Implementation target: <repo/service/module/package>
-- Affected areas: <API/data/security/observability/deployment/docs>
+- Source docs: <paths/URLs or Not applicable>
+- Human-visible target: <product/service/application area>
+- QA/release context: <environment/build/feature flag/release train or Not applicable>
 Blocked fields:
 - <none or exact missing Jira-required fields>
 ```
@@ -84,7 +87,8 @@ Before handing off metadata:
 
 - confirm every Jira-required field is present
 - confirm labels and components exist or are acceptable on the board
-- confirm labels are no more than three items and are specific enough for Dev team routing
-- confirm estimate matches one-week AI-agent scope
-- confirm reviewer is human-facing and implementation owner is AI-agent-facing
-- confirm source docs are linked precisely enough for review
+- confirm labels are no more than three items and are specific enough for human routing
+- confirm estimate matches one-week delivery scope
+- confirm assignee, reviewer, and QA owner are human-facing
+- confirm source docs are linked precisely enough for review when they are included
+- confirm metadata does not leak implementation details
