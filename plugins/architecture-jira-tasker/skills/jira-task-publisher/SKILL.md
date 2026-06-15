@@ -29,8 +29,10 @@ Create the Jira issue only after preflight validation.
 - verify the project, issue type, priority, components, labels, parent epic, sprint or phase, and required custom fields
 - verify estimates, story points, or hours are omitted unless required by the board or explicitly requested by the user
 - verify labels are no more than three specific service, application, platform, bounded-context, or capability labels
+- verify the Jira description body is written in Russian
 - verify the description does not expose development details such as file paths, classes, methods, internal modules, local commands, migration scripts, or implementation sequencing
-- verify QA acceptance criteria and QA validation checks are understandable without reading code or architecture internals
+- verify acceptance criteria are split into `DEV` and `QA`
+- verify `DEV` acceptance criteria describe developer-accepted quality gates, and `QA` acceptance criteria plus QA validation checks are manually testable without reading code or architecture internals
 - search for similar existing Jira issues before creating to avoid duplicates
 - show the final creation payload in chat and wait for explicit user approval before creating the Jira issue
 - for Jira updates, show the field/description diff in chat and wait for explicit user approval before updating

@@ -12,7 +12,7 @@ Use this plugin when the requested outcome is:
 - produce one large task sized around one delivery week
 - apply a provided Jira format profile for project, issue type, priority, parent/epic, workflow, description shape, and testing rules
 - fill Jira metadata, including project, issue type, priority, up to three specific labels, component, parent/epic, sprint or phase, owner, reviewer, QA owner, dependencies, source docs, and release context
-- write a structured task description that product, QA, reviewers, release managers, and support can understand
+- write a structured Jira task description in Russian that product, QA, reviewers, release managers, and support can understand
 - keep the description short enough for a team lead to understand in about 30 seconds
 - keep file paths, classes, internal modules, developer commands, migration scripts, and code-level sequencing out of the Jira issue
 - omit estimates, story points, and hours unless the board requires them or the user explicitly asks for them
@@ -55,7 +55,8 @@ It should include:
 - exact human-visible scope and out-of-scope boundaries
 - behavior, business rules, security/privacy constraints, rollout constraints, and operational expectations when applicable
 - dependencies and sequencing
-- QA acceptance criteria and a `Testing` section with either one-line verification or a separate test-plan reference
+- acceptance criteria split into `DEV` and `QA`, where `DEV` covers developer-accepted code/build/lint/test quality gates and `QA` covers manual UI, UX, action, animation, functionality, negative-path, permission, documentation, and release checks
+- a `Testing` section with either one-line verification or a separate test-plan reference
 - documentation, release, support, or operator updates
 - human review checklist
 - Jira metadata filled from board context or explicit assumptions
@@ -68,7 +69,9 @@ Reject or revise a task when it:
 - leaves metadata as placeholders
 - uses more than three labels or generic labels such as `architecture-ready`, `ai-agent`, `implementation`, or `human-review`
 - leaks development details such as file paths, internal modules, classes, developer commands, migration scripts, or code-level sequencing
-- lacks QA-checkable acceptance criteria and validation context
+- is not written in Russian
+- lacks split `DEV` and `QA` acceptance criteria
+- lacks manually testable QA acceptance criteria and validation context
 - is too long to understand in about 30 seconds
 - includes estimates when the target format says the team lead owns estimates
 - skips duplicate search or creates/updates Jira before explicit approval

@@ -10,6 +10,7 @@ description: Create human-readable, QA-checkable Jira delivery tasks from comple
 Turn completed architecture documentation into a Jira delivery task that humans can understand, plan, review, and QA.
 The task must be large enough to represent a meaningful delivery slice, self-contained enough to avoid architecture follow-up questions, and ready for QA validation after delivery.
 The Jira description must not leak development details: no file paths, classes, methods, internal module plans, implementation commands, migration scripts, or coding instructions unless the team explicitly requires that field.
+The Jira description body must be written in Russian, including section headings and acceptance criteria text. Keep product names, Jira field names, labels, API names, and exact user-provided terms unchanged when translating them would reduce clarity.
 The description must pass the 30-second rule: a team lead or colleague should understand the task in about 30 seconds without scrolling through a long implementation specification.
 
 Use this skill when the user asks to create Jira tasks, delivery tasks, board tasks, backlog items, or QA-checkable work from completed architecture docs.
@@ -126,19 +127,24 @@ Use labels as precise routing and filtering signals for humans.
 
 ## Task Description Contract
 
-The Jira description must use 5-7 short sections for human execution, review, and QA:
+The Jira description must use 5-7 short Russian sections for human execution, review, and QA:
 
-1. Goal
-2. Context, when useful
-3. What's included
-4. Out of scope, when useful
-5. Known limitations, when useful
-6. Acceptance criteria
-7. Testing
-8. Dependencies, when useful
+1. Цель
+2. Контекст, если полезно
+3. Что входит
+4. Не входит, если полезно
+5. Известные ограничения, если полезно
+6. Критерии приемки, с подразделами `DEV` и `QA`
+7. Тестирование
+8. Зависимости, если полезно
 
-For bugs, use a bug-specific shape: Description, Reproduction steps, Expected, Actual, Environment.
-Do not add time estimates, long justifications, device/OS specifics, or implementation-detail inventories to the Description.
+Acceptance criteria must be split into two subsections:
+
+- `DEV`: developer-accepted checks such as code completion, compilation, lint/static checks, type checks, automated tests, unit tests, integration tests, schema/contract checks, and other reviewable engineering quality gates
+- `QA`: manually testable checks such as UI, UX, user actions, animations, visible functionality, negative paths, permissions, notifications, copy, documentation, release behavior, and operator-facing behavior that QA can verify without reading code
+
+For bugs, use a Russian bug-specific shape: Описание, Шаги воспроизведения, Ожидаемый результат, Фактический результат, Окружение.
+Do not add time estimates, long justifications, device/OS specifics, or implementation-detail inventories to the Jira description body.
 
 ## Output
 
@@ -171,5 +177,7 @@ Stop before creating Jira work when:
 - required Jira board fields cannot be discovered or inferred safely
 - task scope is too small and cannot be merged with adjacent work
 - the task has not been explicitly approved for Jira creation or update
+- the Jira description body is not written in Russian
 - the task description would expose development details instead of human-facing behavior
-- QA acceptance criteria cannot be made testable from the available context
+- acceptance criteria are not split into `DEV` and `QA`
+- QA acceptance criteria cannot be made manually testable from the available context
