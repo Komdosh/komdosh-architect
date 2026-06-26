@@ -9,9 +9,11 @@ description: Create human-readable, QA-checkable Jira delivery tasks from comple
 
 Turn completed architecture documentation into a Jira delivery task that humans can understand, plan, review, and QA.
 The task must be large enough to represent a meaningful delivery slice, self-contained enough to avoid architecture follow-up questions, and ready for QA validation after delivery.
+Treat the Jira task as the working contract for what must be done, why it matters, where the scope boundaries are, and how the result will be verified.
 The Jira description must not leak development details: no file paths, classes, methods, internal module plans, implementation commands, migration scripts, or coding instructions unless the team explicitly requires that field.
-The Jira description body must be written in Russian, including section headings and acceptance criteria text. Keep product names, Jira field names, labels, API names, and exact user-provided terms unchanged when translating them would reduce clarity.
+The Jira summary and description body must be written in Russian, including section headings and acceptance criteria text. Keep product names, Jira field names, labels, API names, paths, commands, error messages, canonical labels, and exact user-provided terms unchanged when translating them would reduce clarity.
 The description must pass the 30-second rule: a team lead or colleague should understand the task in about 30 seconds without scrolling through a long implementation specification.
+Important agreements, constraints, risks, blockers, and verification expectations must be in the task itself, not only in private messages, calls, or Jira comments.
 
 Use this skill when the user asks to create Jira tasks, delivery tasks, board tasks, backlog items, or QA-checkable work from completed architecture docs.
 
@@ -23,6 +25,8 @@ Create delivery tasks only after architecture is settled.
 - use the relevant architecture plugins or docs first when the source material is not implementation-ready
 - do not invent missing architecture decisions to make a Jira task look complete
 - surface unresolved architecture questions as blockers, not as task assumptions
+- do not let non-trivial implementation start from a task whose goal, expected result, scope, or verification method must be guessed from oral context
+- if source docs conflict with an accepted product or architecture decision, block task creation until the conflict is resolved
 
 ## One-Week Delivery Scope Rule
 
@@ -44,6 +48,8 @@ Load the minimum needed context:
 - Jira project, board, epic, sprint, issue type, component, and required custom fields when available
 - existing roadmap, release, dependency, migration, or operational notes
 - local team conventions for labels, priorities, story points, estimates, assignees, reviewers, and QA owners
+- required source links such as product requirements, design, API docs, architecture docs, test plans, release notes, or related issues without which the task cannot be executed correctly
+- known assumptions, risks, blockers, access needs, environments, review owners, and evidence locations
 
 If Jira target metadata is missing, use Jira tools to discover it when available.
 Ask only when a required Jira field cannot be inferred safely or discovered.
@@ -61,10 +67,11 @@ Ask only when a required Jira field cannot be inferred safely or discovered.
 Create the Jira issue only when the task is complete enough to avoid placeholder cleanup.
 
 - use available Jira or Atlassian tools when the user wants the issue created on a board
-- validate project, issue type, board, epic or parent, sprint or phase, labels, components, priority, assignee or owner role, reviewer, QA owner, and required custom fields before creation
+- validate that the issue targets the actual Jira board and that project, issue type, status, priority, assignee or owner role, epic or parent, related issues, sprint or phase, labels, components, reviewer, QA owner, and required custom fields are current before creation or update
 - search for similar existing Jira issues before creating new work
 - propose the full task in chat and wait for explicit approval before creating a Jira issue
 - for issue updates, show the proposed description/field diff and wait for explicit approval before updating Jira
+- for updates during delivery, keep status, assignee, blockers, important questions, scope, acceptance criteria, MR/design/API/test-plan/release links, and evidence references current
 - if creation requires a second step for sprint, epic link, labels, required estimate fields, or issue links, perform those updates after issue creation
 - return the issue key, URL, final metadata, and any fields that Jira rejected or normalized
 - if Jira tools are unavailable, return a creation-ready Jira payload instead of pretending the issue was created
@@ -87,6 +94,7 @@ Fill every useful metadata field.
 - project and board
 - issue type
 - summary
+- status
 - parent epic or initiative
 - sprint or target phase
 - priority
@@ -99,6 +107,7 @@ Fill every useful metadata field.
 - due target when the board uses it
 - dependencies and linked issues
 - source architecture docs when the board expects links
+- product, design, API, test-plan, release-note, or related-issue links needed for execution or verification
 - affected product, service, application, release, QA, documentation, or operational areas
 
 Use `Not applicable` only when a field truly does not apply.
@@ -113,6 +122,7 @@ The Jira task is for humans.
 - keep implementation plans in architecture docs, pull requests, or agent-private execution notes, not in the Jira description
 - do not include file paths, class names, method names, internal package/module plans, developer commands, database migration instructions, or code-level sequencing
 - include technical terms only when QA or operations must use them to verify the work
+- do not include hidden requirements that only the task author knows, oral agreements without written task text, confidential data, secrets, tokens, private incident details, or personal data
 - keep the description short enough to fit on one screen; if it cannot, split the task or move detailed checks to a separate test plan
 
 ## Label Policy
@@ -127,23 +137,27 @@ Use labels as precise routing and filtering signals for humans.
 
 ## Task Description Contract
 
-The Jira description must use 5-7 short Russian sections for human execution, review, and QA:
+The Jira description must use short Russian sections for human execution, review, and QA. Use the board/profile structure when it is stricter; otherwise default to this compact shape:
 
 1. Цель
-2. Контекст, если полезно
-3. Что входит
-4. Не входит, если полезно
-5. Известные ограничения, если полезно
-6. Критерии приемки, с подразделами `DEV` и `QA`
-7. Тестирование
-8. Зависимости, если полезно
+2. Что входит
+3. Что не входит, если есть риск неверного ожидания
+4. Ограничения / блокеры
+5. Критерии приемки, с подразделами `Проверяет разработчик` и `Проверяет ручной тестировщик`
+6. Проверка
+7. Зависимости
 
+Acceptance criteria must describe observable behavior, state, artifact, constraint, or technical evidence that can be checked without guessing the author's intent.
 Acceptance criteria must be split into two subsections:
 
-- `DEV`: developer-accepted checks such as code completion, compilation, lint/static checks, type checks, automated tests, unit tests, integration tests, schema/contract checks, and other reviewable engineering quality gates
-- `QA`: manually testable checks such as UI, UX, user actions, animations, visible functionality, negative paths, permissions, notifications, copy, documentation, release behavior, and operator-facing behavior that QA can verify without reading code
+- `Проверяет разработчик`: developer/reviewer evidence such as code completion, compilation, lint/static checks, type checks, automated tests, unit tests, integration tests, schema/contract checks, MR artifacts, and other reviewable engineering quality gates
+- `Проверяет ручной тестировщик`: manual QA checks such as UI, UX, user actions, animations, visible functionality, negative paths, permissions, notifications, copy, documentation, release behavior, and operator-facing behavior that QA can verify without reading code
 
-For bugs, use a Russian bug-specific shape: Описание, Шаги воспроизведения, Ожидаемый результат, Фактический результат, Окружение.
+Use `DEV` and `QA` as subsection headings only when the target Jira format profile or board explicitly requires those exact labels; preserve the same developer/manual QA separation.
+Keep a subsection even when it does not apply, and write `Not applicable` with a short reason instead of deleting the responsibility boundary.
+The `Проверка` section is mandatory. It must state where evidence will live: CI job, MR, test report, QA note, demo, environment, build, artifact, or linked test plan.
+
+For bugs, start with the Russian bug-specific shape: Описание, Шаги воспроизведения, Ожидаемый результат, Фактический результат, Окружение. When the bug issue is delivery work rather than triage-only reporting, also include split acceptance criteria and `Проверка`.
 Do not add time estimates, long justifications, device/OS specifics, or implementation-detail inventories to the Jira description body.
 
 ## Output
@@ -179,5 +193,8 @@ Stop before creating Jira work when:
 - the task has not been explicitly approved for Jira creation or update
 - the Jira description body is not written in Russian
 - the task description would expose development details instead of human-facing behavior
-- acceptance criteria are not split into `DEV` and `QA`
+- acceptance criteria are not split into `Проверяет разработчик` and `Проверяет ручной тестировщик`, or board-required equivalent headings with the same meaning
+- the `Проверка` section is missing or does not identify evidence for developer and manual QA criteria
 - QA acceptance criteria cannot be made manually testable from the available context
+- required design, API, architecture, environment, access, related issue, or test-plan links are missing
+- unresolved blockers would force implementation by guesswork

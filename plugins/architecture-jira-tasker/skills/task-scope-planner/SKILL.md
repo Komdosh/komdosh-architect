@@ -9,6 +9,7 @@ description: Shape completed architecture docs into one coherent, human-visible 
 
 Define the human-visible delivery scope for a Jira task created from architecture docs.
 The scope must be large enough for a meaningful delivery pass and small enough for one human review and QA cycle.
+The scope must make the goal, expected result, boundaries, dependencies, blockers, and verification method clear without relying on oral context.
 
 ## Required Inputs
 
@@ -18,6 +19,8 @@ Require:
 - target product capability, service, application, integration, or release area
 - known implementation boundaries and out-of-scope decisions
 - expected release, epic, milestone, or roadmap phase when available
+- required product, design, API, architecture, environment, access, release, test-plan, and related-issue links
+- known assumptions, risks, blockers, and evidence expectations
 
 ## Scope Rules
 
@@ -28,6 +31,8 @@ Use one task for one coherent delivery slice.
 - include human-visible behavior, QA validation, docs, release, and review in the same issue
 - include migration, observability, security, or operational impact only as QA/release-visible expectations
 - split only for independent ownership, release, migration, data-safety, or review boundaries
+- block or split when the scope mixes independent work that cannot be reviewed, released, or tested together
+- surface missing goal, expected result, critical links, unresolved blockers, or contradictory architecture/product decisions as blockers, not assumptions
 
 Do not create tasks whose Jira description is only an internal technical change, such as:
 
@@ -59,6 +64,8 @@ Split decision:
 - <why this is one Jira task or where it must split>
 Review boundary:
 - <what a human reviewer and QA must verify>
+Readiness blockers:
+- <missing goal/result/link/blocker/contradiction or None>
 ```
 
 ## Quality Bar
@@ -66,7 +73,8 @@ Review boundary:
 The scope is ready when:
 
 - a human reader can understand the target outcome without reading implementation details
+- a developer, reviewer, or QA can understand the goal, expected result, scope boundary, and verification method in about 30 seconds
 - the task has a single primary outcome
 - review can happen in one coherent change set
 - architecture decisions are translated into behavior and constraints
-- risks and dependencies are visible before delivery starts
+- risks, blockers, dependencies, required links, and evidence expectations are visible before delivery starts

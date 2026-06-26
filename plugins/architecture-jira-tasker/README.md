@@ -2,6 +2,7 @@
 
 Architecture Jira Tasker is a Codex plugin for creating Jira delivery tasks after architecture documentation is complete.
 It turns architecture docs into large, self-contained Jira delivery tasks for humans, with QA-checkable criteria and no leaked development details.
+Each task is treated as a working contract: what must be done, why, where the boundaries are, and how the result will be verified.
 
 ## Scope Fit
 
@@ -12,9 +13,11 @@ Use this plugin when the requested outcome is:
 - produce one large task sized around one delivery week
 - apply a provided Jira format profile for project, issue type, priority, parent/epic, workflow, description shape, and testing rules
 - fill Jira metadata, including project, issue type, priority, up to three specific labels, component, parent/epic, sprint or phase, owner, reviewer, QA owner, dependencies, source docs, and release context
-- write a structured Jira task description in Russian that product, QA, reviewers, release managers, and support can understand
+- write a structured Jira summary and task description in Russian that product, QA, reviewers, release managers, and support can understand
 - keep the description short enough for a team lead to understand in about 30 seconds
+- capture important agreements, constraints, risks, blockers, evidence locations, and required links in the task instead of private messages or comments
 - keep file paths, classes, internal modules, developer commands, migration scripts, and code-level sequencing out of the Jira issue
+- keep confidential data, secrets, tokens, private incident details, personal data, and hidden requirements out of the Jira issue
 - omit estimates, story points, and hours unless the board requires them or the user explicitly asks for them
 - propose the full task first, wait for explicit approval, and search for duplicates before creating Jira work
 - create the task on a Jira board when Jira tools are available
@@ -32,6 +35,7 @@ The Jira task is for humans, even when implementation is later performed by an A
 - the issue must include enough context for humans to understand outcome, scope, QA validation, release impact, and review evidence
 - implementation plans belong in architecture docs, pull requests, or private execution notes, not in the Jira task body
 - detailed QA steps belong in a separate test plan when the result can be checked in a running app, database, or networked environment
+- during updates, status, assignee, blockers, important questions, scope, acceptance criteria, MR/design/API/test-plan/release links, and evidence references must stay current
 
 ## Skill Grouping
 
@@ -55,8 +59,9 @@ It should include:
 - exact human-visible scope and out-of-scope boundaries
 - behavior, business rules, security/privacy constraints, rollout constraints, and operational expectations when applicable
 - dependencies and sequencing
-- acceptance criteria split into `DEV` and `QA`, where `DEV` covers developer-accepted code/build/lint/test quality gates and `QA` covers manual UI, UX, action, animation, functionality, negative-path, permission, documentation, and release checks
-- a `Testing` section with either one-line verification or a separate test-plan reference
+- acceptance criteria split into `Проверяет разработчик` and `Проверяет ручной тестировщик`, or board-required equivalent headings with the same developer/manual QA separation
+- developer checks covering code/build/lint/test/schema/contract/MR evidence, and manual tester checks covering UI, UX, actions, animations, functionality, negative paths, permissions, documentation, and release checks
+- a `Проверка` section with the evidence location: CI job, MR, test report, QA note, demo, environment, build, artifact, or linked test plan
 - documentation, release, support, or operator updates
 - human review checklist
 - Jira metadata filled from board context or explicit assumptions
@@ -69,12 +74,13 @@ Reject or revise a task when it:
 - leaves metadata as placeholders
 - uses more than three labels or generic labels such as `architecture-ready`, `ai-agent`, `implementation`, or `human-review`
 - leaks development details such as file paths, internal modules, classes, developer commands, migration scripts, or code-level sequencing
+- leaks confidential data, secrets, tokens, private incident details, personal data, or hidden requirements
 - is not written in Russian
-- lacks split `DEV` and `QA` acceptance criteria
+- lacks split developer/manual tester acceptance criteria
 - lacks manually testable QA acceptance criteria and validation context
 - is too long to understand in about 30 seconds
 - includes estimates when the target format says the team lead owns estimates
 - skips duplicate search or creates/updates Jira before explicit approval
 - hides dependencies or migration/release risk
-- contains only prose without acceptance criteria and validation steps
+- contains only prose without acceptance criteria and verification evidence
 - creates a Jira issue before required board fields are known
