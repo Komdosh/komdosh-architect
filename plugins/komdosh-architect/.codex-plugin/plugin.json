@@ -1,0 +1,37 @@
+{
+  "name": "komdosh-architect",
+  "version": "1.0.0",
+  "description": "Evidence-driven software architecture design, review, visualization, acceptance, and delivery handoff in one compact plugin.",
+  "author": {
+    "name": "Architecture Tools"
+  },
+  "homepage": "https://github.com/Komdosh/komdosh-architect",
+  "repository": "https://github.com/Komdosh/komdosh-architect",
+  "license": "UNLICENSED",
+  "keywords": [
+    "architecture",
+    "system-design",
+    "architecture-review",
+    "adr",
+    "diagrams"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Komdosh Architect",
+    "shortDescription": "Designs and reviews evidence-backed software architecture.",
+    "longDescription": "Komdosh Architect handles architecture discovery, design, review, diagrams, stakeholder acceptance, and delivery handoff without forcing a fixed stage sequence or loading unrelated guidance.",
+    "developerName": "Architecture Tools",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Use $komdosh-architect:architecture to review this system and lead with concrete blockers.",
+      "Use $komdosh-architect:architecture to design the smallest architecture needed for this change.",
+      "Use $komdosh-architect:architecture to turn this accepted design into a delivery-ready handoff."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

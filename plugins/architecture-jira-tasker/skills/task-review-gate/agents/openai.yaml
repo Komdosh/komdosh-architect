@@ -1,5 +1,0 @@
-interface:
-  display_name: "Task Review Gate"
-  short_description: "Check Jira task readiness before creation."
-  brand_color: "#2563EB"
-  default_prompt: "Use $architecture-jira-tasker:task-review-gate to verify this Russian Jira task has developer and manual tester acceptance criteria and is ready to publish."

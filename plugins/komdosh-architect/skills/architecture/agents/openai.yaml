@@ -1,0 +1,5 @@
+interface:
+  display_name: "Komdosh Architect"
+  short_description: "Design and review evidence-backed architecture."
+  brand_color: "#2563EB"
+  default_prompt: "Use $komdosh-architect:architecture to design or review this software architecture."
